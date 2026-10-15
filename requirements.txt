@@ -1,0 +1,8 @@
+pillow
+edge-tts
+gtts
+google-genai
+requests
+google-api-python-client
+google-auth-oauthlib
+yt-dlp

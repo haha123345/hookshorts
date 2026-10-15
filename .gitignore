@@ -1,0 +1,14 @@
+# 개인 파일 — 절대 올리지 않음
+.env
+.env.txt
+env.txt
+client_secret*.json
+youtube_token.json
+state.json
+config.backup.json
+.code_version
+input/
+output/
+__pycache__/
+*.pyc
+*.new.bat
