@@ -12,3 +12,4 @@ output/
 __pycache__/
 *.pyc
 *.new.bat
+cloud_keys.txt

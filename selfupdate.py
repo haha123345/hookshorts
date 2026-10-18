@@ -23,7 +23,7 @@ STAMP = BASE / ".code_version"
 DEFAULT_REPO = "haha123345/hookshorts"
 PROTECT_NAMES = {".env", ".env.txt", "env.txt", "env", "youtube_token.json", "state.json",
                  "config.backup.json", ".code_version"}
-PROTECT_DIRS = {"input", "output", "__pycache__", ".git"}
+PROTECT_DIRS = {"input", "output", "__pycache__", ".git", ".github"}
 RUNNING_BAT = {"start_bot.bat"}
 
 

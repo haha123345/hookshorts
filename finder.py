@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v18 (흰 바탕 카드 디자인 + 자동 업데이트)"
+VERSION = "v19 (GitHub 클라우드 자동 제작)"
 
 
 # ================================================================ 설정/상태
@@ -1812,6 +1812,15 @@ def bot_main():
         print("새 버전을 받았어요. 다시 시작합니다...")
         sys.exit(0)
     last_update_check = time.time()
+    if cfg.get("cloud_mode"):                            # GitHub 클라우드가 대신 만들고 있으면 PC 리모컨은 쉼
+        if not state.get("cloud_notice"):
+            tg.send("☁️ 이제 GitHub 클라우드에서 매일 4편 자동으로 만들어요. PC 리모컨은 꺼둘게요.\n"
+                    "(PC 를 꺼 둬도 돼요. 텔레그램 메시지는 클라우드가 하루 4번 확인해요)")
+            state["cloud_notice"] = True
+            save_state(state)
+        print("클라우드 모드라서 PC 리모컨은 끕니다. 이 창은 닫아도 돼요.")
+        time.sleep(5)
+        sys.exit(3)
     print("텔레그램 명령을 기다리는 중... (이 창을 닫으면 리모컨도 꺼져요)")
     ctx = {}
     while True:

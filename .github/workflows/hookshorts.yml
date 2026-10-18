@@ -1,0 +1,117 @@
+name: hookshorts 자동 제작
+
+on:
+  schedule:
+    # 한국 시간 = UTC + 9시간  (GitHub 예약 실행은 10~40분 늦게 시작될 수 있어요)
+    - cron: "40 22 * * *"   # 07:40 KST
+    - cron: "10 3 * * *"    # 12:10 KST
+    - cron: "10 9 * * *"    # 18:10 KST
+    - cron: "10 12 * * *"   # 21:10 KST
+    - cron: "30 12 * * 0"   # 일요일 21:30 KST 주간 분석
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "만들 종류 (auto=시간표대로 / story=사연 / clip=해외 클립 / report=주간 분석 / messages=메시지만 확인)"
+        default: "story"
+        type: choice
+        options: [auto, story, clip, report, messages]
+
+concurrency:
+  group: hookshorts          # 동시에 두 개가 돌면 기록이 꼬여서 하나씩 차례로
+  cancel-in-progress: false
+
+permissions:
+  contents: write            # 기록(state 브랜치) 저장용
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 프로그램 설치 (ffmpeg, 한글 폰트, 파이썬 패키지)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk > /dev/null
+          pip install -q -r requirements.txt
+          pip install -q -U edge-tts yt-dlp
+
+      - uses: denoland/setup-deno@v2      # yt-dlp 가 유튜브 영상을 받을 때 필요
+        with:
+          deno-version: v2.x
+
+      - name: 키 파일 만들기 (GitHub Secrets → .env)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          YOUTUBE_KEY: ${{ secrets.YOUTUBE_KEY }}
+          PIXABAY_KEY: ${{ secrets.PIXABAY_KEY }}
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: |
+          python - <<'PY'
+          import os
+          keys = ["TELEGRAM_TOKEN", "TELEGRAM_CHAT_ID", "GEMINI_KEY", "YOUTUBE_KEY", "PIXABAY_KEY",
+                  "OPENAI_KEY", "GOOGLE_TTS_KEY"]
+          with open(".env", "w", encoding="utf-8") as f:
+              for k in keys:
+                  if os.environ.get(k):
+                      f.write(f"{k}={os.environ[k].strip()}\n")
+          tok = os.environ.get("YT_TOKEN_JSON", "").strip()
+          if tok:
+              open("youtube_token.json", "w", encoding="utf-8").write(tok)
+          PY
+
+      - name: 지난 기록 불러오기 (state 브랜치)
+        run: |
+          if git fetch -q origin state 2>/dev/null; then
+            git show FETCH_HEAD:state.json > state.json
+          else
+            echo '{}' > state.json
+          fi
+
+      - name: 영상 만들기 + 유튜브 업로드
+        run: |
+          KIND="${{ github.event.inputs.kind }}"
+          if [ "${{ github.event.schedule }}" = "30 12 * * 0" ]; then KIND=report; fi
+          python cloud_run.py "${KIND:-auto}"
+
+      - name: 기록 저장 (state 브랜치)
+        if: always()
+        run: |
+          [ -s state.json ] || exit 0
+          cp state.json /tmp/state.json
+          git config user.name "hookshorts-bot"
+          git config user.email "hookshorts-bot@users.noreply.github.com"
+          rm -rf /tmp/stwt
+          if git fetch -q origin state 2>/dev/null; then
+            git worktree add -q /tmp/stwt FETCH_HEAD
+            cd /tmp/stwt && git checkout -q -B state
+          else
+            git worktree add -q --detach /tmp/stwt
+            cd /tmp/stwt && git checkout -q --orphan state && git rm -rfq .
+          fi
+          cp /tmp/state.json state.json
+          git add state.json
+          git commit -qm "기록 $(date -u +%F_%H%M)" || exit 0
+          git push -q origin state
+
+      - name: 실패하면 텔레그램으로 알림
+        if: failure()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="⚠️ 클라우드 자동 제작 실패 — GitHub Actions 기록: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > /dev/null

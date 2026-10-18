@@ -132,6 +132,13 @@
   "daily_story_count": 1,
   "story_real_photo": true,
   "update_repo": "haha123345/hookshorts",
+  "cloud_mode": false,
+  "cloud_schedule": [
+    {"time": "07:40", "type": "clip"},
+    {"time": "12:10", "type": "story"},
+    {"time": "18:10", "type": "clip"},
+    {"time": "21:10", "type": "story"}
+  ],
   "story_feeds": [
     "https://feeds.feedburner.com/OddityCentral",
     "https://www.goodnewsnetwork.org/feed/",
