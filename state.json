@@ -1,1 +1,20 @@
-{}
+{
+ "chat_id": 6459662764,
+ "story_requests": [],
+ "episode": 1,
+ "stories_used": [
+  "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife"
+ ],
+ "pending_uploads": [],
+ "episodes": {
+  "ep001": {
+   "date": "2026-10-28 04:17",
+   "seconds": 83,
+   "theme": "사연",
+   "hook": "로봇청소기로 아내 잡은 남편이 / 결국 감옥에 가게 됐습니다",
+   "youtube": "OuAt9rCWuFo",
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife"
+  }
+ }
+}
