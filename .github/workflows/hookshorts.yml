@@ -6,14 +6,15 @@ on:
     - cron: "3 2 * * *"     # 11:03 KST 제작 → 12:00 공개
     - cron: "3 8 * * *"     # 17:03 KST 제작 → 18:00 공개
     - cron: "3 11 * * *"    # 20:03 KST 제작 → 21:00 공개 (쇼츠 시청이 가장 많은 밤 시간)
+    - cron: "3 6 * * 0"     # 일요일 15:03 KST 이번 주 쇼츠 모아 롱폼 → 19:00 공개
     - cron: "30 12 * * 0"   # 일요일 21:30 KST 주간 분석
   workflow_dispatch:
     inputs:
       kind:
-        description: "만들 종류 (auto=시간표대로 / story=사연 / clip=해외 클립 / report=주간 분석 / messages=메시지만 확인)"
+        description: "만들 종류 (auto=시간표대로 / story=사연 / long=쇼츠 모아 롱폼 / clip=해외 클립 / report=주간 분석 / messages=메시지만 확인)"
         default: "story"
         type: choice
-        options: [auto, story, clip, report, messages]
+        options: [auto, story, long, clip, report, messages]
 
 concurrency:
   group: hookshorts          # 동시에 두 개가 돌면 기록이 꼬여서 하나씩 차례로
@@ -25,7 +26,7 @@ permissions:
 jobs:
   make:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -81,9 +82,12 @@ jobs:
           fi
 
       - name: 영상 만들기 + 유튜브 업로드
+        env:
+          GH_TOKEN: ${{ github.token }}          # 쇼츠 보관함(Releases) 저장·불러오기용
         run: |
           KIND="${{ github.event.inputs.kind }}"
           if [ "${{ github.event.schedule }}" = "30 12 * * 0" ]; then KIND=report; fi
+          if [ "${{ github.event.schedule }}" = "3 6 * * 0" ]; then KIND=long; fi
           python cloud_run.py "${KIND:-auto}"
 
       - name: 기록 저장 (state 브랜치)

@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v21 (사연 3편 + 자료화면 AI 선택·여러 사이트 + 제목 문법 교정)"
+VERSION = "v22 (쇼츠 보관 + 매주 일요일 롱폼 자동)"
 
 
 # ================================================================ 설정/상태

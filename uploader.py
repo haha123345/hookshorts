@@ -152,7 +152,9 @@ def clean_meta(meta):
     def strip_brackets(t):
         return re.sub(r"[<>]", "", t or "").strip()
     title = strip_brackets(meta.get("title", "")).replace("{", "").replace("}", "")
-    if "#shorts" not in title.lower():
+    if meta.get("long"):                                   # 롱폼은 #shorts 를 붙이지 않음
+        title = re.sub(r"\s*#shorts", "", title, flags=re.I)[:100]
+    elif "#shorts" not in title.lower():
         title = (title + " #shorts").strip()
     if len(title) > 100:
         title = title[:100 - len(" #shorts")].rstrip() + " #shorts"

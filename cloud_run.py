@@ -6,6 +6,7 @@ GitHub Actions 에서 PC 없이 자동 제작·업로드 (하루 3편, 정해진
   python cloud_run.py story     → 사연 영상 1편
   python cloud_run.py clip      → 해외 클립 영상 1편 (실패하면 사연 영상으로 대신)
   python cloud_run.py report    → 주간 채널·경쟁 분석
+  python cloud_run.py long      → 이번 주 쇼츠를 모아 롱폼 1편 (일요일 자동)
 
 텔레그램: 실행할 때마다 그동안 온 메시지를 확인해서
   '사연 주제/링크' 는 다음 사연 영상 소재로 예약, '진단'·'상태'·'도움' 은 바로 답장
@@ -100,7 +101,22 @@ def make_story(env, cfg, state, tg):
     q = state.get("story_requests") or []
     topic = q.pop(0) if q else None
     state["story_requests"] = q
-    return finder.run_story(env, cfg, state, tg, topic)
+    ep = finder.run_story(env, cfg, state, tg, topic)
+    archive(state, ep)
+    return ep
+
+
+def archive(state, ep):
+    """만든 쇼츠를 GitHub 보관함에 (일요일 롱폼 재료)"""
+    if not ep:
+        return
+    video = finder.OUTPUT_DIR / f"{ep}_final.mp4"
+    meta_p = finder.OUTPUT_DIR / f"{ep}_meta.json"
+    if video.exists():
+        import json as _json
+        import longform
+        meta = _json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+        longform.archive_short(state, ep, video, meta, state.get("episodes", {}).get(ep, {}).get("theme", ""))
 
 
 def make_clip(env, cfg, state, tg):
@@ -126,7 +142,7 @@ def main():
     finder.OUTPUT_DIR.mkdir(exist_ok=True)
 
     arg = (sys.argv[1] if len(sys.argv) > 1 else "auto").lower()
-    if arg in ("auto", "", "report") and not cfg.get("cloud_mode"):
+    if arg in ("auto", "", "report", "long") and not cfg.get("cloud_mode"):
         print("config.json 의 cloud_mode 가 꺼져 있어서 예약 실행은 건너뛰어요 (수동 실행은 가능)")
         return
     kind, at = slot_type(cfg) if arg in ("auto", "") else (arg, "수동")
@@ -141,6 +157,11 @@ def main():
     try:
         if kind == "report":
             finder.run_report(env, cfg, state, tg)
+        elif kind == "long":
+            import longform
+            h, m = (int(x) for x in cfg.get("long_publish", "19:00").split(":"))
+            at = now_kst().replace(hour=h, minute=m, second=0, microsecond=0)
+            longform.make_weekly_long(env, cfg, state, tg, at)   # 이미 지났으면 15분 뒤 공개
         elif kind == "messages":
             pass                                          # 메시지 확인만
         elif kind == "clip":
