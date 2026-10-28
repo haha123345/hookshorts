@@ -1,9 +1,10 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 1,
+ "episode": 2,
  "stories_used": [
-  "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife"
+  "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
+  "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -15,6 +16,27 @@
    "youtube": "OuAt9rCWuFo",
    "channels": [],
    "story": "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife"
+  },
+  "ep002": {
+   "date": "2026-10-28 06:53",
+   "seconds": 97,
+   "theme": "사연",
+   "hook": "계곡에 빠뜨린 결혼반지 들고 / 호빗들이 찾아왔습니다",
+   "youtube": "rOcR5zmFUpc",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
+   "title": "계곡에 빠뜨린 결혼반지를 찾아 아일랜드까지 날아온 청년들"
   }
- }
+ },
+ "archive": [
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261028_1553_ep002.mp4",
+   "ep": "ep002",
+   "theme": "사연",
+   "title": "계곡에 빠뜨린 결혼반지를 찾아 아일랜드까지 날아온 청년들",
+   "seconds": 97,
+   "used": false
+  }
+ ]
 }
