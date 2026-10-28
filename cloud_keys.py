@@ -27,6 +27,8 @@ rows = [("TELEGRAM_TOKEN", env.get("TELEGRAM_TOKEN", "")), ("TELEGRAM_CHAT_ID", 
         ("PIXABAY_KEY", env.get("PIXABAY_KEY", "")), ("YT_TOKEN_JSON", token)]
 if env.get("OPENAI_KEY"):
     rows.append(("OPENAI_KEY", env["OPENAI_KEY"]))
+if env.get("PEXELS_KEY"):
+    rows.append(("PEXELS_KEY", env["PEXELS_KEY"]))
 if env.get("GOOGLE_TTS_KEY"):
     rows.append(("GOOGLE_TTS_KEY", env["GOOGLE_TTS_KEY"]))
 

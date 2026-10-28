@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v20 (하루 3편 12·18·21시 자동 공개 + 멈춤 화면 개선)"
+VERSION = "v21 (사연 3편 + 자료화면 AI 선택·여러 사이트 + 제목 문법 교정)"
 
 
 # ================================================================ 설정/상태

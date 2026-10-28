@@ -319,10 +319,13 @@ SCRIPT_PROMPT = """너는 조회수 수백만 회를 만든 한국 '실화 사�
 - 마지막 장면: 결과를 짧고 세게 + 댓글 유도 질문 ("여러분이라면 어떻게 했을까요?").
 - 구어체 끝맺음('~예요/~거든요/~죠/~는데요/~니다'), 문장부호 필수, 강조 단어 1개만 {{중괄호}}.
 
-[자료화면 visual]
-- 장면마다 무료 자료화면 사이트(Pixabay)에서 찾을 영어 검색어 visual (1~3 단어, 흔한 장면) 과 대체 검색어 alt.
-  특정 인물·사건 장면은 없으니 분위기가 맞는 일반 장면으로. 예) "dog sleeping", "firefighter ladder", "hospital hallway",
-  "police car night", "old woman smiling", "computer screen code"
+[자료화면] 장면마다 무료 자료화면 사이트에서 찾을 영어 검색어 3개:
+- visual: 그 장면 나레이션에 나오는 대상·행동을 그대로 보여 주는 구체적 장면 (2~4 단어).
+  예) 남편이 몰래 녹화 → "man watching phone secretly", 로봇청소기 → "robot vacuum cleaner floor",
+      법원 판결 → "judge gavel courtroom", 소방관 출동 → "fire truck siren"
+- alt: 같은 내용을 다르게 표현한 검색어 (visual 로 못 찾을 때)
+- subject: 실제 사진을 찾을 핵심 대상 명사 (1~2 단어, 예: "robot vacuum", "iguana", "courtroom")
+- 막연한 분위기 단어("sad", "mystery", "city night")만 쓰지 마. 나레이션 속 구체적인 것을 찾아.
 - 연속된 장면은 서로 다른 검색어로.
 
 [후킹] hook1(주인공+상황, 16자 이내) / hook2(반전·결과, 16자 이내, 노란색, 핵심 단어 1개 {{중괄호}})
@@ -331,9 +334,10 @@ SCRIPT_PROMPT = """너는 조회수 수백만 회를 만든 한국 '실화 사�
   금지: "결과는 마지막에", "끝까지 보세요", "충격 주의", "결말 주의", "레전드"
 
 [업로드] title(40자 이내, 끝에 #shorts), description(2~3문장, 마지막에 댓글 유도 질문), hashtags(5개, 한국어 위주)
+- title 은 한국어 문법에 맞는 완전한 문장/구 (조사·어미 정확히, 번역투 금지). 예) "로봇청소기 영상 때문에 감옥 간 남편"
 
 JSON만 출력:
-{{"hook1":"","hook2":"","scenes":[{{"text":"","visual":"","alt":""}}],"title":"","description":"","hashtags":["#"]}}
+{{"hook1":"","hook2":"","scenes":[{{"text":"","visual":"","alt":"","subject":""}}],"title":"","description":"","hashtags":["#"]}}
 """
 
 
@@ -349,6 +353,45 @@ def write_story_script(env, cfg, story):
     if len(scenes) < 4:
         raise RuntimeError("사연 대본이 너무 짧아요")
     plan["scenes"] = scenes[:14]
+    return polish_texts(client, models, plan)
+
+
+POLISH_PROMPT = """너는 한국어 교정 전문가이자 쇼츠 카피라이터야. 아래 쇼츠 문구의 문법과 자연스러움을 고쳐 줘.
+
+규칙:
+- 뜻·사실은 그대로. 새로운 내용 추가 금지.
+- 조사(이/가, 을/를, 은/는, 에/에서), 어미, 띄어쓰기를 표준 한국어에 맞게.
+- 번역투("~하는 것이 되었다", "~에 의해"), 명사만 나열한 전보체, 어색한 높임을 자연스러운 구어로.
+- hook1 과 hook2 는 이어 읽으면 한 문장. hook1 16자, hook2 16자 이내 유지. {{중괄호}} 강조는 단어 하나에 그대로 유지.
+- title 은 40자 이내, 끝의 #shorts 유지. description 은 2~3문장.
+- 이미 자연스러우면 그대로 둬.
+
+입력: {data}
+
+JSON만 (같은 키): {{"hook1":"","hook2":"","title":"","description":""}}
+"""
+
+
+def polish_texts(client, models, plan):
+    """제목·후킹 문법 교정 (실패하면 원래 문구 그대로)"""
+    import finder
+    from google.genai import types
+    keys = ("hook1", "hook2", "title", "description")
+    data = json.dumps({k: plan.get(k, "") for k in keys}, ensure_ascii=False)
+    try:
+        conf = types.GenerateContentConfig(response_mime_type="application/json", temperature=0.2)
+        res = finder.gemini_json(client, models, [POLISH_PROMPT.format(data=data)], conf, "제목·후킹 문법 다듬는 중")
+        for k in keys:
+            v = str(res.get(k) or "").strip()
+            limit = {"hook1": 20, "hook2": 20, "title": 60, "description": 400}[k]
+            if v and len(compose.plain(v)) <= limit:
+                if k == "title" and "#shorts" not in v.lower():
+                    v = (v + " #shorts").strip()
+                if v != plan.get(k):
+                    print(f"   교정 {k}: {plan.get(k)} → {v}")
+                plan[k] = v
+    except Exception as e:
+        print(f"   (문법 교정 건너뜀: {str(e)[:100]})")
     return plan
 
 
@@ -438,7 +481,7 @@ def fetch_visual(key, scene, used, seconds):
 # ================================================================ 대본 → 합성
 def build_story_script(cfg, plan, visuals, bgm):
     lines = [f"HOOK1: {plan.get('hook1', '').strip()}", f"HOOK2: {plan.get('hook2', '').strip()}",
-             "CREDIT: 자료화면 Pixabay · 실제 기사 재구성 (출처 설명란)",
+             "CREDIT: 무료 자료화면 · 실제 기사 재구성 (출처 설명란)",
              f"VOICE: {cfg['voice']}", f"RATE: {cfg['rate']}", "AUDIO: off", "XFADE: 0.35"]
     if bgm:
         lines += [f"BGM: {bgm}", f"BGM_VOLUME: {cfg.get('bgm_volume', '0.16')}"]
@@ -450,6 +493,24 @@ def build_story_script(cfg, plan, visuals, bgm):
         text = str(sc["text"]).strip().replace("|", ",")
         lines.append(f"@0.2 | {text}")
     return "\n".join(lines) + "\n"
+
+
+def credit_lines(credits):
+    """자료화면 출처 (Pixabay·Pexels 는 이름만, Openverse CC 사진은 라이선스 규칙대로 제목·저작자·라이선스·링크)"""
+    simple, full = {}, []
+    for c in credits:
+        if not c:
+            continue
+        if c.startswith(("Pixabay", "Pexels")):
+            site, _, who = c.partition(" · ")
+            simple.setdefault(site, [])
+            if who and who not in simple[site]:
+                simple[site].append(who)
+        elif c not in full:
+            full.append(c)
+    lines = [f"자료화면: {site}" + (f" ({', '.join(who[:6])})" if who else "") for site, who in simple.items()]
+    lines += [f"사진: {c}" for c in full]
+    return "\n".join(lines) or "자료화면: Pixabay"
 
 
 def make_story_episode(env, cfg, state, tg, topic=None):
@@ -476,15 +537,16 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     tg.send(f"✍️ 대본 완성 — 장면 {len(plan['scenes'])}개, 약 {chars / 7.0 + 3:.0f}초\n"
             f"후킹: {compose.plain(plan.get('hook1', ''))} / {compose.plain(plan.get('hook2', ''))}\n"
             f"첫 문장: {compose.plain(str(plan['scenes'][0]['text']))}\n\n🎞 자료화면 받는 중...")
-    used, visuals, owners = set(), [], []
-    for sc in plan["scenes"]:
-        est = len(compose.plain(str(sc["text"]))) / 7.0 + 0.9
-        path, dur, owner = fetch_visual(env["PIXABAY_KEY"], sc, used, est + 0.8)
-        a = 0.5 if dur > est + 1.5 else 0.0
-        b = min(dur, a + est + 0.6)
-        visuals.append((path, a, b))
-        owners.append(owner)
-        time.sleep(0.3)                                   # Pixabay 요청 간격
+    import visuals as vis
+
+    def est_of(sc):
+        return len(compose.plain(str(sc["text"]))) / 7.0 + 0.9
+
+    def fallback(sc, secs):
+        path, dur, owner = fetch_visual(env["PIXABAY_KEY"], sc, set(), secs)
+        return path, dur, f"Pixabay · {owner}"
+
+    visuals, owners = vis.pick_all(env, cfg, plan, STORY_DIR, photo_to_clip, fallback, est_of)
 
     # ---- 마지막 장면은 기사 속 실제 사진으로
     real_site = None
@@ -524,7 +586,7 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     src = f"출처: {story['title']} ({story['url']})"
     if real_site:
         src += f"\n마지막 사진 출처: {real_site} (기사 사진)"
-    pix = "자료화면: Pixabay" + (f" ({', '.join(sorted(set(o for o in owners if o))[:6])})" if any(owners) else "")
+    pix = credit_lines(owners)
     ups = {"youtube": f"{title}\n\n{desc}\n\n{src}\n{pix}\n※ 실제 기사를 바탕으로 재구성한 영상이에요.\n\n{tags}",
            "tiktok": f"{re.sub(r'#shorts', '', title, flags=re.I).strip()} {tags}\n\n{src}",
            "reels": f"{re.sub(r'#shorts', '', title, flags=re.I).strip()}\n\n{desc}\n\n{src}\n\n{tags}"}

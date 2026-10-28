@@ -54,13 +54,14 @@ jobs:
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
           YOUTUBE_KEY: ${{ secrets.YOUTUBE_KEY }}
           PIXABAY_KEY: ${{ secrets.PIXABAY_KEY }}
+          PEXELS_KEY: ${{ secrets.PEXELS_KEY }}
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
         run: |
           python - <<'PY'
           import os
-          keys = ["TELEGRAM_TOKEN", "TELEGRAM_CHAT_ID", "GEMINI_KEY", "YOUTUBE_KEY", "PIXABAY_KEY",
+          keys = ["TELEGRAM_TOKEN", "TELEGRAM_CHAT_ID", "GEMINI_KEY", "YOUTUBE_KEY", "PIXABAY_KEY", "PEXELS_KEY",
                   "OPENAI_KEY", "GOOGLE_TTS_KEY"]
           with open(".env", "w", encoding="utf-8") as f:
               for k in keys:
