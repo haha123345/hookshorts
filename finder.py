@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v22 (쇼츠 보관 + 매주 일요일 롱폼 자동)"
+VERSION = "v23 (사연 채널용 경쟁 분석 + 우리 채널 성적으로 소재·후킹 학습)"
 
 
 # ================================================================ 설정/상태
@@ -1519,9 +1519,12 @@ def apply_report(cfg, state, rec):
              "updated": datetime.now().strftime("%Y-%m-%d")}
     if any(notes[k] for k in ("patterns", "structure", "hook_examples")):
         state["style_notes"] = notes
+    if rec.get("story_topics") or rec.get("avoid_topics"):
+        state["story_topics"] = {"prefer": rec.get("story_topics", [])[:4], "avoid": rec.get("avoid_topics", [])[:4]}
     rec["recommended_keywords"], rec["drop_keywords"] = [], []
     save_state(state)
-    return (f"추가 검색어: {', '.join(add) or '-'}\n제외 검색어: {', '.join(drop) or '-'}\n"
+    tp = state.get("story_topics") or {}
+    return (f"우선 소재: {', '.join(tp.get('prefer', [])) or '-'}\n피할 소재: {', '.join(tp.get('avoid', [])) or '-'}\n"
             f"대본·후킹 참고: 경쟁 패턴 {len(notes['patterns'])}개, 후킹 예시 {len(notes['hook_examples'])}개")
 
 
@@ -1542,7 +1545,8 @@ def run_report(env, cfg, state, tg):
         if auto and m.startswith("🔧"):
             continue                                   # 자동 반영이면 '적용하세요' 안내 대신 결과를 보냄
         tg.send(m)
-    if auto and (rec.get("recommended_keywords") or rec.get("drop_keywords") or rec.get("hook_examples")):
+    if auto and (rec.get("recommended_keywords") or rec.get("drop_keywords") or rec.get("hook_examples")
+                 or rec.get("story_topics")):
         summary = apply_report(cfg, state, rec)
         tg.send("🤖 이번 주 분석 결과를 자동으로 반영했어요\n" + summary +
                 "\n\n다음 영상부터 적용돼요. 마음에 안 들면 '되돌리기'")

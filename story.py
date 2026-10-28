@@ -226,6 +226,30 @@ def get_article(client, models, url, title="", rss_text=""):
     return title, read_with_gemini(client, models, url)
 
 
+def channel_feedback(state):
+    """우리 채널에서 잘 된/안 된 사연 (최근 30편 조회수) + 주간 분석의 우선·회피 소재 → 소재 고르기 힌트"""
+    lines = []
+    try:
+        import uploader
+        eps = [(ep, i) for ep, i in state.get("episodes", {}).items() if i.get("youtube") and i.get("title")][-30:]
+        if len(eps) >= 4:
+            r = uploader.service().videos().list(part="statistics,status", id=",".join(i["youtube"] for _, i in eps)).execute()
+            views = {it["id"]: int(it["statistics"].get("viewCount", 0)) for it in r.get("items", [])
+                     if it["status"].get("privacyStatus") == "public"}
+            ranked = sorted([(views[i["youtube"]], i["title"]) for _, i in eps if i["youtube"] in views], reverse=True)
+            if len(ranked) >= 4:
+                lines.append("우리 채널에서 조회수가 높았던 사연: " + " / ".join(f"{t}({v}회)" for v, t in ranked[:3]))
+                lines.append("반응이 낮았던 사연(비슷한 건 피해): " + " / ".join(t for _, t in ranked[-3:]))
+    except Exception as e:
+        print(f"   (채널 성적 확인 건너뜀: {str(e)[:80]})")
+    tp = state.get("story_topics") or {}
+    if tp.get("prefer"):
+        lines.append("이번 주 분석에서 추천한 소재 유형: " + ", ".join(tp["prefer"]))
+    if tp.get("avoid"):
+        lines.append("피할 소재 유형: " + ", ".join(tp["avoid"]))
+    return ("\n[참고 - 우리 채널 데이터]\n" + "\n".join(lines)) if lines else ""
+
+
 def pick_story(env, cfg, state, topic=None):
     """반환: {title, url, text, image} 또는 None"""
     import finder
@@ -254,6 +278,7 @@ def pick_story(env, cfg, state, topic=None):
         listing = "\n".join(f"{i}. {'[본문] ' if len(it.get('content', '')) > 800 else ''}{it['title']} - "
                             f"{it['summary'][:120]}" for i, it in enumerate(items, 1))
         rule = f"[시청자가 요청한 주제: '{topic}'] 이 주제와 맞는 후보만 골라. 없으면 빈 목록." if topic else ""
+        rule += channel_feedback(state)
         conf = types.GenerateContentConfig(response_mime_type="application/json", temperature=0.4)
         try:
             res = finder.gemini_json(client, models, [PICK_PROMPT.format(items=listing, topic_rule=rule)],
@@ -341,13 +366,13 @@ JSON만 출력:
 """
 
 
-def write_story_script(env, cfg, story):
+def write_story_script(env, cfg, story, state=None):
     import finder
     from google.genai import types
     client = finder.gemini_client(env)
     models = finder.model_order(client, cfg.get("gemini_model", "gemini-flash-latest"))
     conf = types.GenerateContentConfig(response_mime_type="application/json", temperature=0.7)
-    prompt = SCRIPT_PROMPT.format(title=story["title"], text=story["text"][:8000])
+    prompt = SCRIPT_PROMPT.format(title=story["title"], text=story["text"][:8000]) + finder.learned_notes(state or {})
     plan = finder.gemini_json(client, models, [prompt], conf, "사연 대본 쓰는 중")
     scenes = [s for s in plan.get("scenes") or [] if str(s.get("text", "")).strip()]
     if len(scenes) < 4:
@@ -525,7 +550,7 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     tg.send(f"📰 소재: {story['title']}\n{story['url']}\n\n✍️ 대본 쓰는 중... (1~2분)")
     t0 = time.time()
 
-    plan = write_story_script(env, cfg, story)
+    plan = write_story_script(env, cfg, story, state)
     state["episode"] = state.get("episode", 0) + 1
     ep = f"ep{state['episode']:03d}"
     state.setdefault("stories_used", []).append(story["url"])
@@ -603,7 +628,8 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     state.setdefault("episodes", {})[ep] = {
         "date": datetime.now().strftime("%Y-%m-%d %H:%M"), "seconds": round(total), "theme": "사연",
         "hook": f"{compose.plain(plan.get('hook1', ''))} / {compose.plain(plan.get('hook2', ''))}",
-        "youtube": uploaded, "channels": [], "story": story["url"]}
+        "youtube": uploaded, "channels": [], "story": story["url"],
+        "title": re.sub(r"\s*#shorts", "", title, flags=re.I).strip()}
     finder.save_state(state)
     if not uploaded:
         tg.send("📺 유튜브 (첫 줄=제목, 나머지=설명란)")

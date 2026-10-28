@@ -108,18 +108,18 @@
   "competitor_queries_per_report": 8,
   "analyze_competitor_videos": true,
   "competitor_queries": [
-    "아찔한 순간",
-    "결말 주의",
-    "충격 반전 영상",
-    "해외 사고 영상",
-    "자연재해 순간",
-    "동물 돌발 행동",
-    "소름 돋는 순간",
-    "실제 상황 영상",
-    "익스트림 스포츠",
-    "토네이도 영상",
-    "쓰나미 영상",
-    "곰 영상"
+    "해외 실화",
+    "해외 사연",
+    "실화 사연",
+    "믿기 힘든 실화",
+    "황당한 해외 뉴스",
+    "감동 실화",
+    "해외 이슈 사연",
+    "외국 사건 실화",
+    "반전 실화",
+    "세상에 이런 일이",
+    "동물 구조 실화",
+    "황당 판결"
   ],
   "youtube_style": "single",
   "mute_speech_clips": true,
@@ -138,9 +138,21 @@
   "long_max_shorts": 12,
   "long_publish": "19:00",
   "cloud_schedule": [
-    {"time": "11:03", "publish": "12:00", "type": "story"},
-    {"time": "17:03", "publish": "18:00", "type": "story"},
-    {"time": "20:03", "publish": "21:00", "type": "story"}
+    {
+      "time": "11:03",
+      "publish": "12:00",
+      "type": "story"
+    },
+    {
+      "time": "17:03",
+      "publish": "18:00",
+      "type": "story"
+    },
+    {
+      "time": "20:03",
+      "publish": "21:00",
+      "type": "story"
+    }
   ],
   "story_feeds": [
     "https://feeds.feedburner.com/OddityCentral",
