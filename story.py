@@ -172,6 +172,9 @@ PICK_PROMPT = """너는 한국 쇼츠 '실화 사연' 채널 작가야. 아래 �
 제외: 사람이 죽거나 크게 다친 사건, 아이가 위험에 처한 사건, 범죄 피해자 이야기, 정치·종교, 복권 당첨, 광고성 기사,
 '오늘의 역사' 같은 모음 기사.
 {topic_rule}
+[이미 우리 채널에 올린 영상 제목 — 같은 사건·같은 주인공 이야기는 표현이 달라도 절대 고르지 마. 유튜브가 중복 영상으로 보고 노출을 끊어요]
+{already}
+
 후보:
 {items}
 
@@ -224,6 +227,27 @@ def get_article(client, models, url, title="", rss_text=""):
         return title, rss_text
     print("   Gemini 가 대신 기사 읽는 중...")
     return title, read_with_gemini(client, models, url)
+
+
+def uploaded_titles(state, limit=200):
+    """채널에 이미 올라간 영상 제목 (PC 시절 영상 포함) — 같은 사연 다시 만들기 방지"""
+    titles = []
+    try:
+        import uploader
+        yt = uploader.service()
+        ch = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]
+        up, token = ch["contentDetails"]["relatedPlaylists"]["uploads"], None
+        while len(titles) < limit:
+            r = yt.playlistItems().list(part="snippet", playlistId=up, maxResults=50, pageToken=token).execute()
+            titles += [re.sub(r"\s*#shorts", "", it["snippet"]["title"], flags=re.I) for it in r.get("items", [])]
+            token = r.get("nextPageToken")
+            if not token:
+                break
+    except Exception as e:
+        print(f"   (올린 영상 목록 확인 실패: {str(e)[:80]})")
+    titles += [i.get("title", "") for i in state.get("episodes", {}).values() if i.get("title")]
+    seen = list(dict.fromkeys(t for t in titles if t))
+    return "\n".join(f"- {t}" for t in seen[:limit]) or "(없음)"
 
 
 def channel_feedback(state):
@@ -281,7 +305,8 @@ def pick_story(env, cfg, state, topic=None):
         rule += channel_feedback(state)
         conf = types.GenerateContentConfig(response_mime_type="application/json", temperature=0.4)
         try:
-            res = finder.gemini_json(client, models, [PICK_PROMPT.format(items=listing, topic_rule=rule)],
+            res = finder.gemini_json(client, models, [PICK_PROMPT.format(items=listing, topic_rule=rule,
+                                                                         already=uploaded_titles(state))],
                                      conf, "사연 소재 고르는 중")
         except Exception as e:                                     # AI 가 다 바쁘면: 본문 있는 최신 기사부터
             print(f"   (소재 고르기 AI 실패 → 본문 있는 기사 순서대로: {str(e)[:80]})")

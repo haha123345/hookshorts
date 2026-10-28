@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v25 (빠른 전개: 짧은 문장·빠른 목소리·빠른 전환)"
+VERSION = "v25.1 (이미 올린 사연 다시 만들지 않기)"
 
 
 # ================================================================ 설정/상태
