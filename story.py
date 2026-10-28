@@ -338,7 +338,9 @@ SCRIPT_PROMPT = """너는 조회수 수백만 회를 만든 한국 '실화 사�
 - 일반인 실명은 쓰지 말고 "미국의 한 할머니", "한 소방관"처럼. 나라·도시 이름은 써도 돼.
 
 [구성]
-- scenes 8~12개. 각 scene 의 text = 나레이션 1문장 (15~45자). 전체 글자 수 420~560자.
+- scenes 11~15개. 각 scene 의 text = 나레이션 짧은 1문장 (12~32자). 전체 글자 수 400~480자.
+- 속도감이 생명: 한 문장에 정보 하나. "그런데 말이죠", "여러분 혹시 아시나요" 같은 군더더기·뜸 들이는 말 금지.
+  2~3초마다 새로운 사실이 나오게.
 - 1번 장면: 바로 위기나 기이한 상황으로 시작 ("아침에 눈을 떴는데, ~"). 배경 설명으로 시작하지 마.
 - 중간: '그런데', '바로 그때', '알고 보니' 같은 연결어로 긴장 → 반전.
 - 마지막 장면: 결과를 짧고 세게 + 댓글 유도 질문 ("여러분이라면 어떻게 했을까요?").
@@ -509,7 +511,8 @@ def fetch_visual(key, scene, used, seconds):
 def build_story_script(cfg, plan, visuals, bgm):
     lines = [f"HOOK1: {plan.get('hook1', '').strip()}", f"HOOK2: {plan.get('hook2', '').strip()}",
              "CREDIT: 무료 자료화면 · 실제 기사 재구성 (출처 설명란)",
-             f"VOICE: {cfg['voice']}", f"RATE: {cfg['rate']}", "AUDIO: off", "XFADE: 0.35"]
+             f"VOICE: {cfg['voice']}", f"RATE: {cfg.get('story_rate', '+22%')}", "AUDIO: off",
+             "XFADE: 0.22", "GAP: 0.08"]
     if bgm:
         lines += [f"BGM: {bgm}", f"BGM_VOLUME: {cfg.get('bgm_volume', '0.16')}"]
     lines.append("---")
@@ -518,7 +521,7 @@ def build_story_script(cfg, plan, visuals, bgm):
         label = (plan.get("_labels") or {}).get(i, "")
         lines.append(f"[clip: {rel} | {a:.1f}-{b:.1f} | {label}]")
         text = str(sc["text"]).strip().replace("|", ",")
-        lines.append(f"@0.2 | {text}")
+        lines.append(f"@0.05 | {text}")
     return "\n".join(lines) + "\n"
 
 
@@ -570,7 +573,7 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     import visuals as vis
 
     def est_of(sc):
-        return len(compose.plain(str(sc["text"]))) / 7.0 + 0.9
+        return len(compose.plain(str(sc["text"]))) / 8.2 + 0.4
 
     def fallback(sc, secs):
         path, dur, owner = fetch_visual(env["PIXABAY_KEY"], sc, set(), secs)
@@ -585,7 +588,7 @@ def make_story_episode(env, cfg, state, tg, topic=None):
             img, real_site = article_image(story["url"], story.get("image", ""))
             if img:
                 last = plan["scenes"][-1]
-                est = len(compose.plain(str(last["text"]))) / 7.0 + 0.9
+                est = len(compose.plain(str(last["text"]))) / 8.2 + 0.4
                 secs = est + 1.6                                       # 사진은 조금 더 오래 보여 주기
                 clip = real_photo_clip(img, STORY_DIR / f"{Path(img).stem}_{int(secs * 10)}.mp4", secs)
                 visuals[-1] = (clip, 0.0, secs)
