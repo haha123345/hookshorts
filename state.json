@@ -1,10 +1,11 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 2,
+ "episode": 3,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
-  "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/"
+  "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
+  "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -26,6 +27,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
    "title": "계곡에 빠뜨린 결혼반지를 찾아 아일랜드까지 날아온 청년들"
+  },
+  "ep003": {
+   "date": "2026-10-28 09:11",
+   "seconds": 83,
+   "theme": "사연",
+   "hook": "남이 등을 긁어주는 / 서비스로 대박났습니다",
+   "youtube": "Lwq4jvrxn_I",
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
+   "title": "남이 등 긁어주는 가게로 대박 난 사나이"
   }
  },
  "archive": [
@@ -36,6 +47,15 @@
    "theme": "사연",
    "title": "계곡에 빠뜨린 결혼반지를 찾아 아일랜드까지 날아온 청년들",
    "seconds": 97,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261028_1811_ep003.mp4",
+   "ep": "ep003",
+   "theme": "사연",
+   "title": "남이 등 긁어주는 가게로 대박 난 사나이",
+   "seconds": 83,
    "used": false
   }
  ]
