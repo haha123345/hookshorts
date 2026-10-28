@@ -368,11 +368,11 @@ def _download(url, out):
     return out
 
 
-def pixabay_video(key, q, used):
+def pixabay_video(key, q, used, min_dur=4.0):
     data = _get("https://pixabay.com/api/videos/", key=key, q=q, safesearch="true", per_page=12,
                 video_type="film")
     for h in data.get("hits", []):
-        if f"v{h['id']}" in used or h.get("duration", 0) < 4:
+        if f"v{h['id']}" in used or h.get("duration", 0) < max(4.0, min_dur):   # 나레이션보다 짧으면 멈춤 화면이 생김
             continue
         vids = h.get("videos", {})
         best = next((vids[k] for k in ("medium", "large", "small")
@@ -427,7 +427,7 @@ def fetch_visual(key, scene, used, seconds):
         if not q:
             continue
         try:
-            got = pixabay_video(key, q, used) if kind == "v" else pixabay_photo(key, q, used, seconds)
+            got = pixabay_video(key, q, used, seconds) if kind == "v" else pixabay_photo(key, q, used, seconds)
             if got:
                 return got
         except Exception as e:

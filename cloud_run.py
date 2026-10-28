@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-GitHub Actions 에서 PC 없이 자동 제작·업로드 (하루 4편)
+GitHub Actions 에서 PC 없이 자동 제작·업로드 (하루 3편, 정해진 시각에 자동 공개)
 
   python cloud_run.py           → 지금 시각에 맞는 칸(config.json 의 cloud_schedule)의 영상 1편
   python cloud_run.py story     → 사연 영상 1편
@@ -18,9 +18,9 @@ import finder
 
 KST = timezone(timedelta(hours=9))
 
-CLOUD_HELP = """☁️ 클라우드 자동 제작 (PC 꺼져 있어도 매일 4편)
+CLOUD_HELP = """☁️ 클라우드 자동 제작 (PC 꺼져 있어도 매일 3편: 12시·18시·21시 공개)
 
-텔레그램 메시지는 다음 제작 때(하루 4번) 확인해요.
+텔레그램 메시지는 다음 제작 때(하루 3번) 확인해요.
 사연 고양이 구조 — 다음 사연 영상 소재로 예약
 사연 https://기사링크 — 그 기사로 다음 사연 영상
 진단 — 최근 영상 점검 (비공개·저작권 차단 등)
@@ -46,6 +46,16 @@ def slot_type(cfg):
         if best_gap is None or gap < best_gap:
             best, best_gap = s, gap
     return (best or {}).get("type", "story"), (best or {}).get("time", "")
+
+
+def publish_time(cfg, at):
+    """그 칸의 공개 시각 (오늘, KST) → datetime. 없으면 None"""
+    for s in cfg.get("cloud_schedule") or []:
+        if s.get("time") == at and s.get("publish"):
+            h, m = (int(x) for x in s["publish"].split(":"))
+            t = now_kst().replace(hour=h, minute=m, second=0, microsecond=0)
+            return t if t > now_kst() - timedelta(hours=3) else t + timedelta(days=1)
+    return None
 
 
 def handle_messages(env, cfg, state, tg):
@@ -76,7 +86,7 @@ def handle_messages(env, cfg, state, tg):
             eps = [(ep, i) for ep, i in state.get("episodes", {}).items() if i.get("date", "").startswith(today)]
             lines = [f"☁️ 클라우드 자동 제작 ({finder.VERSION})",
                      "오늘 만든 영상: " + (", ".join(f"{ep}({i.get('theme', '')})" for ep, i in eps) or "아직 없음"),
-                     "하루 일정: " + " · ".join(f"{s['time']} {'사연' if s['type'] == 'story' else '해외 클립'}"
+                     "하루 일정(공개 시각): " + " · ".join(f"{s.get('publish', s['time'])} {'사연' if s['type'] == 'story' else '해외 클립'}"
                                              for s in cfg.get("cloud_schedule", [])),
                      f"예약된 사연 소재: {len(state.get('story_requests', []))}개"]
             tg.send("\n".join(lines))
@@ -122,6 +132,10 @@ def main():
     kind, at = slot_type(cfg) if arg in ("auto", "") else (arg, "수동")
     print(f"[클라우드] {now_kst():%Y-%m-%d %H:%M} 칸={at} 종류={kind}")
 
+    if at != "수동" and cfg.get("auto_publish", True):
+        import uploader
+        uploader.PUBLISH_AT["at"] = publish_time(cfg, at)
+        print(f"  자동 공개 예약: {uploader.PUBLISH_AT['at']}")
     handle_messages(env, cfg, state, tg)
     finder.save_state(state)
     try:

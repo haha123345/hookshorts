@@ -3,10 +3,9 @@ name: hookshorts 자동 제작
 on:
   schedule:
     # 한국 시간 = UTC + 9시간  (GitHub 예약 실행은 10~40분 늦게 시작될 수 있어요)
-    - cron: "40 22 * * *"   # 07:40 KST
-    - cron: "10 3 * * *"    # 12:10 KST
-    - cron: "10 9 * * *"    # 18:10 KST
-    - cron: "10 12 * * *"   # 21:10 KST
+    - cron: "3 2 * * *"     # 11:03 KST 제작 → 12:00 공개
+    - cron: "3 8 * * *"     # 17:03 KST 제작 → 18:00 공개
+    - cron: "3 11 * * *"    # 20:03 KST 제작 → 21:00 공개 (쇼츠 시청이 가장 많은 밤 시간)
     - cron: "30 12 * * 0"   # 일요일 21:30 KST 주간 분석
   workflow_dispatch:
     inputs:

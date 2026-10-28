@@ -132,12 +132,12 @@
   "daily_story_count": 1,
   "story_real_photo": true,
   "update_repo": "haha123345/hookshorts",
-  "cloud_mode": false,
+  "cloud_mode": true,
+  "auto_publish": true,
   "cloud_schedule": [
-    {"time": "07:40", "type": "clip"},
-    {"time": "12:10", "type": "story"},
-    {"time": "18:10", "type": "clip"},
-    {"time": "21:10", "type": "story"}
+    {"time": "11:03", "publish": "12:00", "type": "story"},
+    {"time": "17:03", "publish": "18:00", "type": "clip"},
+    {"time": "20:03", "publish": "21:00", "type": "story"}
   ],
   "story_feeds": [
     "https://feeds.feedburner.com/OddityCentral",

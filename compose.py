@@ -888,8 +888,15 @@ def compose(script, out_path):
                 v += f",eq=brightness={br:.3f}:contrast=1.06:saturation=1.12,vignette=angle=PI/5.5"
             if cfg.get("SHARPEN", "on").lower() != "off":
                 v += ",unsharp=5:5:0.55:5:5:0.0"           # 업스케일된 원본을 살짝 선명하게
-            v += f",setsar=1,fps={FPS},format=yuv420p"
             extra = seg["len"] - seg["clip_len"]
+            slow = seg["len"] / max(seg["clip_len"], 0.1)
+            uses_audio = seg["has_audio"] and audio_on and not seg.get("mute") and not seg.get("replay")
+            if (extra > 0.01 and slow <= 1.5 and seg.get("key") is None and not seg.get("replay")
+                    and not uses_audio):
+                # 나레이션이 화면보다 길 때: 멈춘 화면(정지) 대신 살짝 느리게 재생 → 덜 어색함
+                v = f"setpts={slow:.4f}*PTS," + v
+                extra = 0.0
+            v += f",setsar=1,fps={FPS},format=yuv420p"
             if extra > 0.01:
                 v += f",tpad=stop_mode=clone:stop_duration={extra + 0.2:.2f}"
             v += f",trim=duration={seg['len']},setpts=PTS-STARTPTS"

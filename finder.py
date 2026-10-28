@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v19.1 (클립 못 찾으면 기준 낮춰 재검색)"
+VERSION = "v20 (하루 3편 12·18·21시 자동 공개 + 멈춤 화면 개선)"
 
 
 # ================================================================ 설정/상태
@@ -1201,8 +1201,15 @@ def youtube_upload(tg, video, meta, ep, state=None, quiet=False):
             ch = f"「{uploader.channel_info()[0]}」 채널에 "
         except Exception:
             ch = ""
-        tg.send(f"📺 {ep} {ch}비공개로 올렸어요 (제목·설명·태그 입력 완료)\n"
-                f"👉 저작권 '문제 없음' 확인 후 '공개' 또는 '예약'으로 바꾸세요\n{studio}")
+        sch = uploader.LAST.get("scheduled")
+        if sch:
+            from datetime import timezone as _tz, timedelta as _td
+            when = sch.astimezone(_tz(_td(hours=9))).strftime("%H:%M")
+            tg.send(f"📺 {ep} {ch}올렸어요 — 오늘 {when}에 자동 공개 예약\n"
+                    f"👉 Studio 에서 저작권 '문제 없음'인지만 확인하세요 (문제 있으면 예약 취소)\n{studio}")
+        else:
+            tg.send(f"📺 {ep} {ch}비공개로 올렸어요 (제목·설명·태그 입력 완료)\n"
+                    f"👉 저작권 '문제 없음' 확인 후 '공개' 또는 '예약'으로 바꾸세요\n{studio}")
         print(f"  업로드 완료: {watch}")
         if state is not None:
             state["pending_uploads"] = [p for p in state.get("pending_uploads", []) if p["ep"] != ep]

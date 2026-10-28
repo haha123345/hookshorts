@@ -166,11 +166,22 @@ def clean_meta(meta):
     return title, desc, tags
 
 
+PUBLISH_AT = {"at": None}      # 클라우드가 정해 주는 자동 공개 시각 (datetime, 없으면 비공개로만)
+LAST = {"scheduled": None}
+
+
 def upload(video_path, meta, progress=print):
-    """비공개로 업로드하고 영상 ID를 반환"""
+    """비공개로 업로드하고 영상 ID를 반환 (PUBLISH_AT 이 있으면 그 시각에 자동 공개 예약)"""
+    from datetime import datetime, timedelta, timezone
     from googleapiclient.http import MediaFileUpload
     yt = service()
     title, desc, tags = clean_meta(meta)
+    at = meta.get("publish_at") or PUBLISH_AT["at"]
+    if at is not None:
+        now = datetime.now(timezone.utc)
+        if at <= now + timedelta(minutes=10):              # 제작이 늦어져 시간이 지났으면 15분 뒤 공개
+            at = now + timedelta(minutes=15)
+    LAST["scheduled"] = at
     body = {
         "snippet": {"title": title, "description": desc, "tags": tags,
                     "categoryId": meta.get("category", "24"),          # 24 = 엔터테인먼트
@@ -178,6 +189,8 @@ def upload(video_path, meta, progress=print):
         "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
                    "embeddable": True},
     }
+    if at is not None:
+        body["status"]["publishAt"] = at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     media = MediaFileUpload(str(video_path), mimetype="video/mp4",
                             chunksize=8 * 1024 * 1024, resumable=True)
     req = yt.videos().insert(part="snippet,status", body=body, media_body=media)
