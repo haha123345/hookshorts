@@ -6,6 +6,8 @@
    - Pixabay 영상/사진 (PIXABAY_KEY)
    - Pexels 영상/사진 (PEXELS_KEY 가 있을 때만)
    - Openverse 사진 (키 필요 없음 · 위키미디어·플리커 등의 CC0/CC BY/CC BY-SA 사진 → 출처 표기 자동)
+   - AI 이미지 (CF_ACCOUNT_ID + CF_API_TOKEN 이 있을 때만 · Cloudflare Workers AI 무료 한도 하루 약 200장)
+     → 자료화면이 장면과 안 맞을 때 AI 가 그린 장면을 후보로. 쓰면 유튜브에 'AI 생성 콘텐츠' 표시를 자동으로 켬
 """
 import re
 import time
@@ -114,7 +116,31 @@ def openverse_candidates(q, used):
     return out
 
 
-def gather(env, scene, min_dur, used):
+def ai_image_candidate(env, scene, work_dir):
+    """Cloudflare Workers AI (flux-1-schnell, 무료 한도) 로 장면 이미지 1장"""
+    prompt = scene.get("image_prompt") or ""
+    if not prompt or not (env.get("CF_ACCOUNT_ID") and env.get("CF_API_TOKEN")):
+        return []
+    import base64
+    try:
+        r = requests.post(
+            f"https://api.cloudflare.com/client/v4/accounts/{env['CF_ACCOUNT_ID']}/ai/run/@cf/black-forest-labs/flux-1-schnell",
+            headers={"Authorization": f"Bearer {env['CF_API_TOKEN']}"}, timeout=90,
+            json={"prompt": prompt + ", photorealistic, cinematic lighting, natural colors, no text, no watermark",
+                  "steps": 6})
+        r.raise_for_status()
+        img = base64.b64decode(r.json()["result"]["image"])
+        n = len(list(Path(work_dir).glob("ai_*.jpg")))
+        path = Path(work_dir) / f"ai_{n:02d}.jpg"
+        path.write_bytes(img)
+        return [{"id": f"ai{n}", "kind": "photo", "src": "AI", "url": path.as_uri(), "local": str(path),
+                 "thumb": path.as_uri(), "credit": "AI"}]
+    except Exception as e:
+        print(f"   (AI 이미지 실패: {str(e)[:100]})")
+        return []
+
+
+def gather(env, scene, min_dur, used, work_dir=None):
     cands = []
     for q in [scene.get("visual"), scene.get("alt")]:
         if not q:
@@ -132,7 +158,10 @@ def gather(env, scene, min_dur, used):
         if c["id"] not in seen:
             seen.add(c["id"])
             uniq.append(c)
-    return uniq[:7]
+    uniq = uniq[:7]
+    if work_dir:
+        uniq += ai_image_candidate(env, scene, work_dir)
+    return uniq
 
 
 # ---------------------------------------------------------------- AI 가 썸네일 보고 고르기
@@ -142,6 +171,7 @@ CHOOSE_PROMPT = """너는 쇼츠 편집자야. 아래 실화 사연의 장면마
 규칙:
 - 나레이션에 나오는 대상(사람·동물·물건·장소·행동)이 실제로 보이는 후보가 1순위.
 - 비슷하게 맞으면 사진보다 움직이는 영상(video)을 골라.
+- 'AI가 그린 그림' 후보는 실제 자료화면 중에 맞는 게 없을 때만 골라 (손·얼굴이 이상하게 그려졌으면 고르지 마).
 - 내용과 반대되거나 엉뚱한 분위기(예: 슬픈 장면에 웃는 사람, 한국 이야기가 아닌데 한글 간판 등)는 고르지 마.
 - 글자·워터마크·로고가 크게 보이는 후보는 피해.
 - 연속된 장면에서 거의 같은 화면이 반복되지 않게.
@@ -170,10 +200,12 @@ def choose(env, cfg, plan, all_cands):
             parts.append(f"\n[장면 {si}] {re.sub(r'[{}]', '', str(sc['text']))}")
             for ci, c in enumerate(cands, 1):
                 try:
-                    img = requests.get(c["thumb"], headers=UA, timeout=20).content
+                    img = (Path(c["local"]).read_bytes() if c.get("local")
+                           else requests.get(c["thumb"], headers=UA, timeout=20).content)
                     if len(img) < 500:
                         continue
-                    parts.append(f"후보 {ci} ({'영상' if c['kind'] == 'video' else '사진'}, {c['src']}):")
+                    kind = "AI가 그린 그림" if c["src"] == "AI" else ("영상" if c["kind"] == "video" else "사진")
+                    parts.append(f"후보 {ci} ({kind}, {c['src']}):")
                     parts.append(types.Part.from_bytes(data=img, mime_type="image/jpeg"))
                     n_img += 1
                 except Exception:
@@ -217,7 +249,9 @@ def materialize(c, seconds, story_dir, photo_to_clip):
             download(c["url"], out)
         return out, c["dur"], c["credit"]
     img = Path(story_dir) / f"{safe}.jpg"
-    if not img.exists():
+    if c.get("local"):
+        img = Path(c["local"])
+    elif not img.exists():
         download(c["url"], img)
     out = Path(story_dir) / f"{safe}_{int(seconds * 10)}.mp4"
     photo_to_clip(img, out, seconds)
@@ -230,7 +264,7 @@ def pick_all(env, cfg, plan, story_dir, photo_to_clip, fallback, est_fn):
     all_cands = []
     for sc in plan["scenes"]:
         est = est_fn(sc)
-        cands = gather(env, sc, est + 0.8, used)
+        cands = gather(env, sc, est + 0.8, used, story_dir)
         all_cands.append(cands)
         print(f"   장면 후보 {len(cands)}개: {sc.get('visual')}")
     picks = choose(env, cfg, plan, all_cands)

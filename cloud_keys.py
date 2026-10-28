@@ -29,6 +29,9 @@ if env.get("OPENAI_KEY"):
     rows.append(("OPENAI_KEY", env["OPENAI_KEY"]))
 if env.get("PEXELS_KEY"):
     rows.append(("PEXELS_KEY", env["PEXELS_KEY"]))
+for k in ("CF_ACCOUNT_ID", "CF_API_TOKEN"):
+    if env.get(k):
+        rows.append((k, env[k]))
 if env.get("GOOGLE_TTS_KEY"):
     rows.append(("GOOGLE_TTS_KEY", env["GOOGLE_TTS_KEY"]))
 

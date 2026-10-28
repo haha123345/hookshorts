@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v23 (사연 채널용 경쟁 분석 + 우리 채널 성적으로 소재·후킹 학습)"
+VERSION = "v24 (무료 AI 이미지 후보 — Cloudflare 키 있을 때)"
 
 
 # ================================================================ 설정/상태

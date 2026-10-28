@@ -191,6 +191,8 @@ def upload(video_path, meta, progress=print):
         "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
                    "embeddable": True},
     }
+    if meta.get("synthetic"):                              # AI 로 만든 사실적인 장면이 들어가면 유튜브 규정상 표시
+        body["status"]["containsSyntheticMedia"] = True
     if at is not None:
         body["status"]["publishAt"] = at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     media = MediaFileUpload(str(video_path), mimetype="video/mp4",

@@ -350,6 +350,8 @@ SCRIPT_PROMPT = """너는 조회수 수백만 회를 만든 한국 '실화 사�
       법원 판결 → "judge gavel courtroom", 소방관 출동 → "fire truck siren"
 - alt: 같은 내용을 다르게 표현한 검색어 (visual 로 못 찾을 때)
 - subject: 실제 사진을 찾을 핵심 대상 명사 (1~2 단어, 예: "robot vacuum", "iguana", "courtroom")
+- image_prompt: 자료화면이 없을 때 AI 로 그릴 장면 묘사 (영어 한 문장, 실제 인물 이름·로고·글자 없이,
+  예: "a man secretly watching a robot vacuum camera feed on his phone in a dim living room")
 - 막연한 분위기 단어("sad", "mystery", "city night")만 쓰지 마. 나레이션 속 구체적인 것을 찾아.
 - 연속된 장면은 서로 다른 검색어로.
 
@@ -362,7 +364,7 @@ SCRIPT_PROMPT = """너는 조회수 수백만 회를 만든 한국 '실화 사�
 - title 은 한국어 문법에 맞는 완전한 문장/구 (조사·어미 정확히, 번역투 금지). 예) "로봇청소기 영상 때문에 감옥 간 남편"
 
 JSON만 출력:
-{{"hook1":"","hook2":"","scenes":[{{"text":"","visual":"","alt":"","subject":""}}],"title":"","description":"","hashtags":["#"]}}
+{{"hook1":"","hook2":"","scenes":[{{"text":"","visual":"","alt":"","subject":"","image_prompt":""}}],"title":"","description":"","hashtags":["#"]}}
 """
 
 
@@ -526,6 +528,9 @@ def credit_lines(credits):
     for c in credits:
         if not c:
             continue
+        if c == "AI":
+            simple.setdefault("AI 재현 이미지 (Cloudflare Workers AI)", [])
+            continue
         if c.startswith(("Pixabay", "Pexels")):
             site, _, who = c.partition(" · ")
             simple.setdefault(site, [])
@@ -618,7 +623,7 @@ def make_story_episode(env, cfg, state, tg, topic=None):
     (finder.OUTPUT_DIR / f"{ep}_upload.txt").write_text(
         f"[유튜브]\n{ups['youtube']}\n\n[틱톡]\n{ups['tiktok']}\n\n[인스타 릴스]\n{ups['reels']}\n", encoding="utf-8")
     meta = {"title": title, "description": ups["youtube"].split("\n", 1)[1].strip(),
-            "tags": plan.get("hashtags", [])}
+            "tags": plan.get("hashtags", []), "synthetic": "AI" in owners}
     (finder.OUTPUT_DIR / f"{ep}_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1),
                                                        encoding="utf-8")
     tg.video(finder.telegram_copy(out), f"✅ {ep} 사연 영상 완성 ({total:.0f}초, 제작 {(time.time() - t0) / 60:.0f}분)\n"
