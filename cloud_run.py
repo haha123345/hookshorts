@@ -162,6 +162,17 @@ def main():
             h, m = (int(x) for x in cfg.get("long_publish", "19:00").split(":"))
             at = now_kst().replace(hour=h, minute=m, second=0, microsecond=0)
             longform.make_weekly_long(env, cfg, state, tg, at)   # 이미 지났으면 15분 뒤 공개
+        elif kind == "stats":
+            import analyzer
+            dump = analyzer.channel_dump()
+            state["channel_dump"] = dump
+            vs = dump["videos"]
+            lines = [f"📈 채널 성적 ({dump['channel']} · 구독자 {dump['subs']} · 총 조회 {dump['total_views']})"]
+            for v in vs[:25]:
+                extra = f" · 시청 {v['avg_pct']}%" if "avg_pct" in v else ""
+                lines.append(f"{v['published'][5:]} {v['views']}회{extra} {'🔒' if v['privacy'] != 'public' else ''}"
+                             f"{'⛔' if v['blocked'] else ''} {v['title'][:30]}")
+            tg.send("\n".join(lines))
         elif kind == "messages":
             pass                                          # 메시지 확인만
         elif kind == "clip":

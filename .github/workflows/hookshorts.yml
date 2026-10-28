@@ -14,7 +14,7 @@ on:
         description: "만들 종류 (auto=시간표대로 / story=사연 / long=쇼츠 모아 롱폼 / clip=해외 클립 / report=주간 분석 / messages=메시지만 확인)"
         default: "story"
         type: choice
-        options: [auto, story, long, clip, report, messages]
+        options: [auto, story, long, clip, report, stats, messages]
 
 concurrency:
   group: hookshorts          # 동시에 두 개가 돌면 기록이 꼬여서 하나씩 차례로

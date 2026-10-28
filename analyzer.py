@@ -120,6 +120,55 @@ def diagnose(state, n=15):
     return "🩺 최근 영상 점검\n\n" + "\n".join(lines) + "\n\n" + "\n\n".join(tips)
 
 
+def channel_dump(limit=60):
+    """채널에 올라간 영상 전체(최근 limit개) 성적: 제목·공개일·길이·조회수·좋아요·댓글·공개상태
+    + (분석 권한이 있으면) 평균 시청 비율·평균 시청 시간·조회함 수"""
+    import uploader
+    yt = uploader.service()
+    ch = yt.channels().list(part="contentDetails,statistics,snippet", mine=True).execute()["items"][0]
+    up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    ids, token = [], None
+    while len(ids) < limit:
+        r = yt.playlistItems().list(part="contentDetails", playlistId=up, maxResults=50, pageToken=token).execute()
+        ids += [it["contentDetails"]["videoId"] for it in r.get("items", [])]
+        token = r.get("nextPageToken")
+        if not token:
+            break
+    rows = []
+    for part in chunks(ids[:limit]):
+        r = yt.videos().list(part="snippet,statistics,status,contentDetails", id=",".join(part)).execute()
+        for it in r.get("items", []):
+            st = it.get("statistics", {})
+            rows.append({"id": it["id"], "title": it["snippet"]["title"][:70],
+                         "published": it["snippet"].get("publishedAt", "")[:16].replace("T", " "),
+                         "sec": iso_seconds(it["contentDetails"].get("duration")),
+                         "views": int(st.get("viewCount", 0) or 0), "likes": int(st.get("likeCount", 0) or 0),
+                         "comments": int(st.get("commentCount", 0) or 0),
+                         "privacy": it["status"].get("privacyStatus"),
+                         "ai": it["status"].get("containsSyntheticMedia"),
+                         "blocked": bool((it["contentDetails"].get("regionRestriction") or {}))})
+    if uploader.has_analytics():
+        try:
+            from googleapiclient.discovery import build
+            ya = build("youtubeAnalytics", "v2", credentials=uploader.get_credentials(), cache_discovery=False)
+            end = datetime.now().date()
+            r = ya.reports().query(ids="channel==MINE", startDate=str(end - timedelta(days=120)), endDate=str(end),
+                                   dimensions="video", sort="-views", maxResults=200,
+                                   metrics="views,averageViewDuration,averageViewPercentage,subscribersGained").execute()
+            heads = [h["name"] for h in r.get("columnHeaders", [])]
+            stats = {row[0]: dict(zip(heads, row)) for row in r.get("rows", [])}
+            for row in rows:
+                a = stats.get(row["id"])
+                if a:
+                    row.update(avg_pct=round(a.get("averageViewPercentage", 0), 1),
+                               avg_sec=round(a.get("averageViewDuration", 0)), subs=a.get("subscribersGained", 0))
+        except Exception as e:
+            print(f"(분석 데이터 실패: {e})")
+    return {"channel": ch["snippet"]["title"], "subs": ch.get("statistics", {}).get("subscriberCount"),
+            "total_views": ch.get("statistics", {}).get("viewCount"), "videos": rows,
+            "at": datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+
 def my_channel(state):
     """봇이 올린 영상들의 성적. 반환: dict"""
     import uploader
