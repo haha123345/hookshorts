@@ -1,11 +1,12 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 3,
+ "episode": 4,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
-  "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched"
+  "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
+  "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -37,6 +38,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
    "title": "남이 등 긁어주는 가게로 대박 난 사나이"
+  },
+  "ep004": {
+   "date": "2026-10-28 12:01",
+   "seconds": 69,
+   "theme": "사연",
+   "hook": "옐로스톤 공원에서 길 잃은 10살 / 한 달 만에 기적적으로 가족 만났어요",
+   "youtube": "iAEmqfT8qKI",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
+   "title": "옐로스톤에서 한 달 동안 살아남은 10살 강아지"
   }
  },
  "archive": [
@@ -56,6 +67,15 @@
    "theme": "사연",
    "title": "남이 등 긁어주는 가게로 대박 난 사나이",
    "seconds": 83,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261028_2101_ep004.mp4",
+   "ep": "ep004",
+   "theme": "사연",
+   "title": "옐로스톤에서 한 달 동안 살아남은 10살 강아지",
+   "seconds": 69,
    "used": false
   }
  ],
