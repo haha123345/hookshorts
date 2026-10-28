@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v19 (GitHub 클라우드 자동 제작)"
+VERSION = "v19.1 (클립 못 찾으면 기준 낮춰 재검색)"
 
 
 # ================================================================ 설정/상태
@@ -1325,28 +1325,34 @@ def auto_pick(env, cfg, state):
     score = state.get("theme_scores", {})
     kws = sorted(active_keywords(cfg, state),
                  key=lambda k: (last.get(k, 0) - score.get(k, 0) * 3 * 86400, random.random()))
-    for kw in kws[:8]:
-        last[kw] = time.time()
-        print(f"  자동 검색: {kw}")
-        try:
-            res = search_youtube(env["YOUTUBE_KEY"], kw, cfg, seen)
-        except Exception as e:
-            print(f"   (검색 실패: {e})")
-            continue
-        res = [c for c in res if c.get("channel_id") not in blocked and not suspicious_channel(c, cfg)]
-        res.sort(key=lambda c: -c["views"])
-        picks, chans, total = [], set(), 0
-        for c in res:
-            if c["channel_id"] in chans:          # 채널 하나당 클립 1개 (위험 분산)
+    # 1차: 원래 기준(조회수·클립 3개) → 못 찾으면 2차: 조회수 기준 1/4, 클립 2개, 검색어 더 많이
+    for pass_no, (views_min, need, n_kw) in enumerate(
+            [(cfg["min_views"], 3, 8), (max(3000, cfg["min_views"] // 4), 2, 14)], 1):
+        pcfg = dict(cfg, min_views=views_min)
+        if pass_no == 2:
+            print(f"  (기준을 낮춰 다시 찾아요: 조회수 {views_min:,}회 이상, 클립 {need}개)")
+        for kw in kws[:n_kw]:
+            last[kw] = time.time()
+            print(f"  자동 검색: {kw}")
+            try:
+                res = search_youtube(env["YOUTUBE_KEY"], kw, pcfg, seen)
+            except Exception as e:
+                print(f"   (검색 실패: {e})")
                 continue
-            picks.append(c)
-            chans.add(c["channel_id"])
-            total += min(c["seconds"], 30)
-            if len(picks) >= int(cfg.get("auto_candidates", 5)) or (len(picks) >= 4 and total >= 110):
-                break
-        if len(picks) >= 3:
-            save_state(state)
-            return kw, picks
+            res = [c for c in res if c.get("channel_id") not in blocked and not suspicious_channel(c, cfg)]
+            res.sort(key=lambda c: -c["views"])
+            picks, chans, total = [], set(), 0
+            for c in res:
+                if c["channel_id"] in chans:          # 채널 하나당 클립 1개 (위험 분산)
+                    continue
+                picks.append(c)
+                chans.add(c["channel_id"])
+                total += min(c["seconds"], 30)
+                if len(picks) >= int(cfg.get("auto_candidates", 5)) or (len(picks) >= 4 and total >= 110):
+                    break
+            if len(picks) >= need:
+                save_state(state)
+                return kw, picks
     save_state(state)
     return None, []
 
@@ -1359,7 +1365,7 @@ def auto_make(env, cfg, state, tg, count, reason="요청"):
         try:
             kw, picks = auto_pick(env, cfg, state)
             if not picks:
-                tg.send("😥 조건에 맞는 클립을 더 못 찾았어요. config.json 키워드를 늘려 주세요.")
+                tg.send("😥 기준을 낮춰도 쓸 만한 해외 클립을 못 찾았어요. (클라우드에서는 사연 영상으로 대신 만들어요)")
                 break
             tg.send(f"🎯 {i + 1}/{count}: 주제 '{kw}' — " + ", ".join(c["channel"] for c in picks))
             ep = make_episode(env, cfg, state, tg, picks)
