@@ -1,12 +1,13 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 4,
+ "episode": 5,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
   "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
-  "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/"
+  "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
+  "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -48,6 +49,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
    "title": "옐로스톤에서 한 달 동안 살아남은 10살 강아지"
+  },
+  "ep005": {
+   "date": "2026-10-29 02:55",
+   "seconds": 57,
+   "theme": "사연",
+   "hook": "바다 한가운데서 발견된 / 대왕 캥거루 구조 작전",
+   "youtube": "hu3MHysZoNk",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
+   "title": "바다 한가운데서 발견된 캥거루 구출 작전"
   }
  },
  "archive": [
@@ -76,6 +87,15 @@
    "theme": "사연",
    "title": "옐로스톤에서 한 달 동안 살아남은 10살 강아지",
    "seconds": 69,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261029_1155_ep005.mp4",
+   "ep": "ep005",
+   "theme": "사연",
+   "title": "바다 한가운데서 발견된 캥거루 구출 작전",
+   "seconds": 57,
    "used": false
   }
  ],
