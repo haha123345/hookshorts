@@ -1,13 +1,14 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 5,
+ "episode": 6,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
   "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
   "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
-  "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/"
+  "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
+  "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -59,6 +60,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
    "title": "바다 한가운데서 발견된 캥거루 구출 작전"
+  },
+  "ep006": {
+   "date": "2026-10-29 09:09",
+   "seconds": 77,
+   "theme": "사연",
+   "hook": "시급 20달러짜리 / 로봇 개 산책 알바의 비밀",
+   "youtube": "ZeeHaQIPftg",
+   "channels": [],
+   "story": "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
+   "title": "시급 20달러 로봇 개 산책 알바의 충격적인 조건"
   }
  },
  "archive": [
@@ -96,6 +107,15 @@
    "theme": "사연",
    "title": "바다 한가운데서 발견된 캥거루 구출 작전",
    "seconds": 57,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261029_1809_ep006.mp4",
+   "ep": "ep006",
+   "theme": "사연",
+   "title": "시급 20달러 로봇 개 산책 알바의 충격적인 조건",
+   "seconds": 77,
    "used": false
   }
  ],
