@@ -1,14 +1,15 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 6,
+ "episode": 7,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
   "https://www.odditycentral.com/news/entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched.html?utm_source=rss&utm_medium=rss&utm_campaign=entrepreneur-opens-unique-salons-where-customers-relax-by-being-gently-scratched",
   "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
   "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
-  "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/"
+  "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
+  "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -70,6 +71,16 @@
    "channels": [],
    "story": "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
    "title": "시급 20달러 로봇 개 산책 알바의 충격적인 조건"
+  },
+  "ep007": {
+   "date": "2026-10-29 12:00",
+   "seconds": 79,
+   "theme": "사연",
+   "hook": "영국 동물원 탈출 카피바라가 / 7개월 만에 포착됐어요",
+   "youtube": "CKLJMO7Z6mU",
+   "channels": [],
+   "story": "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
+   "title": "7개월 만에 야생에서 포착된 탈출 카피바라"
   }
  },
  "archive": [
@@ -116,6 +127,15 @@
    "theme": "사연",
    "title": "시급 20달러 로봇 개 산책 알바의 충격적인 조건",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261029_2100_ep007.mp4",
+   "ep": "ep007",
+   "theme": "사연",
+   "title": "7개월 만에 야생에서 포착된 탈출 카피바라",
+   "seconds": 79,
    "used": false
   }
  ],
