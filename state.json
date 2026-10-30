@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 9,
+ "episode": 10,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -11,7 +11,8 @@
   "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
   "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
   "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
-  "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship"
+  "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship",
+  "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -103,6 +104,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship",
    "title": "배구 코트 뒤흔든 210cm 선수의 놀라운 나이"
+  },
+  "ep010": {
+   "date": "2026-10-30 11:56",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "8년 동안 도망친 탈주범이 / 여동생으로 살다 잡혔습니다",
+   "youtube": "PwDIjliZPwY",
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman",
+   "title": "여동생으로 8년 동안 숨어 지낸 탈주범의 최후"
   }
  },
  "archive": [
@@ -176,6 +187,15 @@
    "theme": "사연",
    "title": "배구 코트 뒤흔든 210cm 선수의 놀라운 나이",
    "seconds": 70,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261030_2056_ep010.mp4",
+   "ep": "ep010",
+   "theme": "사연",
+   "title": "여동생으로 8년 동안 숨어 지낸 탈주범의 최후",
+   "seconds": 74,
    "used": false
   }
  ],
