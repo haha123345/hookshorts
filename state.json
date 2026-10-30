@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 8,
+ "episode": 9,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -10,7 +10,8 @@
   "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
   "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
   "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
-  "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/"
+  "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
+  "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -92,6 +93,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
    "title": "학교 패싸움 말리러 뛰어간 교장의 최후"
+  },
+  "ep009": {
+   "date": "2026-10-30 09:06",
+   "seconds": 70,
+   "theme": "사연",
+   "hook": "코트를 뒤흔든 거구의 선수가 / 알고 보니 13살이었습니다",
+   "youtube": "j9tG6-eNK8Q",
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship",
+   "title": "배구 코트 뒤흔든 210cm 선수의 놀라운 나이"
   }
  },
  "archive": [
@@ -156,6 +167,15 @@
    "theme": "사연",
    "title": "학교 패싸움 말리러 뛰어간 교장의 최후",
    "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261030_1806_ep009.mp4",
+   "ep": "ep009",
+   "theme": "사연",
+   "title": "배구 코트 뒤흔든 210cm 선수의 놀라운 나이",
+   "seconds": 70,
    "used": false
   }
  ],
