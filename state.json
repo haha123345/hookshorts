@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 7,
+ "episode": 8,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -9,7 +9,8 @@
   "https://www.goodnewsnetwork.org/10-year-old-dog-found-month-lost-in-yellowstone/",
   "https://www.goodnewsnetwork.org/bizarre-rescue-sees-divers-save-kangaroo-that-found-itself-over-a-mile-from-dry-land/",
   "https://www.upi.com/Odd_News/2026/10/28/dimension-san-francisco-robot-dog-walkers/9021793207168/",
-  "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/"
+  "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
+  "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -81,6 +82,16 @@
    "channels": [],
    "story": "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
    "title": "7개월 만에 야생에서 포착된 탈출 카피바라"
+  },
+  "ep008": {
+   "date": "2026-10-30 03:05",
+   "seconds": 75,
+   "theme": "사연",
+   "hook": "학교 패싸움 말리러 갔더니 / 전교생의 생일파티였습니다",
+   "youtube": "EhWa34Nl-SM",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
+   "title": "학교 패싸움 말리러 뛰어간 교장의 최후"
   }
  },
  "archive": [
@@ -136,6 +147,15 @@
    "theme": "사연",
    "title": "7개월 만에 야생에서 포착된 탈출 카피바라",
    "seconds": 79,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261030_1205_ep008.mp4",
+   "ep": "ep008",
+   "theme": "사연",
+   "title": "학교 패싸움 말리러 뛰어간 교장의 최후",
+   "seconds": 75,
    "used": false
   }
  ],
