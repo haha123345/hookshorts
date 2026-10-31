@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 11,
+ "episode": 12,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -13,7 +13,8 @@
   "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
   "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship",
   "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman",
-  "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/"
+  "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/",
+  "https://www.goodnewsnetwork.org/a-farmer-didnt-know-his-cell-number-was-on-an-exam-question-now-uses-the-calls-he-gets-as-opportunities-to-inspire/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -125,6 +126,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/",
    "title": "내비 오류로 길 잘못 들었다가 14명 구한 운전자"
+  },
+  "ep012": {
+   "date": "2026-10-31 08:52",
+   "seconds": 72,
+   "theme": "사연",
+   "hook": "영어 시험 문제를 풀다가 / 진짜 농부를 만났습니다",
+   "youtube": "h6JqRekLezQ",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/a-farmer-didnt-know-his-cell-number-was-on-an-exam-question-now-uses-the-calls-he-gets-as-opportunities-to-inspire/",
+   "title": "영어 시험지에 적힌 번호로 연락해 본 학생의 결말"
   }
  },
  "archive": [
@@ -216,6 +227,15 @@
    "theme": "사연",
    "title": "내비 오류로 길 잘못 들었다가 14명 구한 운전자",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261031_1752_ep012.mp4",
+   "ep": "ep012",
+   "theme": "사연",
+   "title": "영어 시험지에 적힌 번호로 연락해 본 학생의 결말",
+   "seconds": 72,
    "used": false
   }
  ],
