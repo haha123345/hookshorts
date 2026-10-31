@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 10,
+ "episode": 11,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -12,7 +12,8 @@
   "https://www.upi.com/Odd_News/2026/10/28/marwell-zoo-samba-capybara-sighting/1521793199576/",
   "https://www.goodnewsnetwork.org/student-plays-truly-epic-birthday-prank-on-high-school-principal-who-changed-his-life-watch/",
   "https://www.odditycentral.com/news/qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship.html?utm_source=rss&utm_medium=rss&utm_campaign=qatars-13-year-old-volleybal-giant-raises-eyebrows-at-asian-championship",
-  "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman"
+  "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman",
+  "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -114,6 +115,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman",
    "title": "여동생으로 8년 동안 숨어 지낸 탈주범의 최후"
+  },
+  "ep011": {
+   "date": "2026-10-31 03:00",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "내비가 길을 잘못 알려줬는데 / 14명의 목숨을 살렸습니다",
+   "youtube": "j6Q5JF5SK9c",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/",
+   "title": "내비 오류로 길 잘못 들었다가 14명 구한 운전자"
   }
  },
  "archive": [
@@ -195,6 +206,15 @@
    "ep": "ep010",
    "theme": "사연",
    "title": "여동생으로 8년 동안 숨어 지낸 탈주범의 최후",
+   "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-10",
+   "asset": "20261031_1200_ep011.mp4",
+   "ep": "ep011",
+   "theme": "사연",
+   "title": "내비 오류로 길 잘못 들었다가 14명 구한 운전자",
    "seconds": 74,
    "used": false
   }
