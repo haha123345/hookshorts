@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 13,
+ "episode": 14,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -15,7 +15,8 @@
   "https://www.odditycentral.com/news/male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman.html?utm_source=rss&utm_medium=rss&utm_campaign=male-fugitive-avoids-capture-for-8-years-by-changing-gender-and-living-as-a-woman",
   "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/",
   "https://www.goodnewsnetwork.org/a-farmer-didnt-know-his-cell-number-was-on-an-exam-question-now-uses-the-calls-he-gets-as-opportunities-to-inspire/",
-  "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/"
+  "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/",
+  "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -147,6 +148,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/",
    "title": "39년 일한 청소부의 이름이 새 학교에 붙은 이유"
+  },
+  "ep014": {
+   "date": "2026-11-01 03:01",
+   "seconds": 72,
+   "theme": "사연",
+   "hook": "흙바닥에 앉던 소녀에게 / 집주인이 벤치를 줬더니",
+   "youtube": "_nHdTczYopk",
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
+   "title": "흙바닥에 앉던 여학생에게 몰래 벤치를 놔줬더니"
   }
  },
  "archive": [
@@ -256,6 +267,15 @@
    "theme": "사연",
    "title": "39년 일한 청소부의 이름이 새 학교에 붙은 이유",
    "seconds": 73,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261101_1201_ep014.mp4",
+   "ep": "ep014",
+   "theme": "사연",
+   "title": "흙바닥에 앉던 여학생에게 몰래 벤치를 놔줬더니",
+   "seconds": 72,
    "used": false
   }
  ],
