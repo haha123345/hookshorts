@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 14,
+ "episode": 15,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -16,7 +16,8 @@
   "https://www.goodnewsnetwork.org/family-thats-fostered-500-children-saved-from-housefire-thanks-to-strangers-wrong-turn/",
   "https://www.goodnewsnetwork.org/a-farmer-didnt-know-his-cell-number-was-on-an-exam-question-now-uses-the-calls-he-gets-as-opportunities-to-inspire/",
   "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/",
-  "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/"
+  "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
+  "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -158,6 +159,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
    "title": "흙바닥에 앉던 여학생에게 몰래 벤치를 놔줬더니"
+  },
+  "ep015": {
+   "date": "2026-11-01 09:09",
+   "seconds": 71,
+   "theme": "사연",
+   "hook": "시각장애인이 음주운전으로 / 고속도로 241km 달렸다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
+   "title": "앞차 미등만 보고 241km 달린 음주 시각장애인"
   }
  },
  "archive": [
@@ -276,6 +287,15 @@
    "theme": "사연",
    "title": "흙바닥에 앉던 여학생에게 몰래 벤치를 놔줬더니",
    "seconds": 72,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261101_1810_ep015.mp4",
+   "ep": "ep015",
+   "theme": "사연",
+   "title": "앞차 미등만 보고 241km 달린 음주 시각장애인",
+   "seconds": 71,
    "used": false
   }
  ],
@@ -1173,5 +1193,6 @@
    "youtube": null,
    "minutes": 14.7
   }
- ]
+ ],
+ "tg_offset": 359912106
 }
