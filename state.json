@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 15,
+ "episode": 16,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -17,7 +17,8 @@
   "https://www.goodnewsnetwork.org/a-farmer-didnt-know-his-cell-number-was-on-an-exam-question-now-uses-the-calls-he-gets-as-opportunities-to-inspire/",
   "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/",
   "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
-  "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway"
+  "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
+  "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -169,6 +170,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
    "title": "앞차 미등만 보고 241km 달린 음주 시각장애인"
+  },
+  "ep016": {
+   "date": "2026-11-01 11:52",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "최악의 셔츠를 입었더니 / 카메라에선 투명인간이 됩니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras",
+   "title": "CCTV 앞에서 투명인간 되는 하와이안 셔츠"
   }
  },
  "archive": [
@@ -296,6 +307,15 @@
    "theme": "사연",
    "title": "앞차 미등만 보고 241km 달린 음주 시각장애인",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261101_2052_ep016.mp4",
+   "ep": "ep016",
+   "theme": "사연",
+   "title": "CCTV 앞에서 투명인간 되는 하와이안 셔츠",
+   "seconds": 74,
    "used": false
   }
  ],
