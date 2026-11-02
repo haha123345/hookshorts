@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 17,
+ "episode": 18,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -19,7 +19,8 @@
   "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
   "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
   "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras",
-  "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/"
+  "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/",
+  "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -191,6 +192,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/",
    "title": "한밤중 남편을 살려낸 똑똑한 보조견의 기적"
+  },
+  "ep018": {
+   "date": "2026-11-02 09:20",
+   "seconds": 71,
+   "theme": "사연",
+   "hook": "중국집에서 술 마시다가 / 한 남자의 목숨을 구했습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/",
+   "title": "우연한 만남이 절망에 빠진 남자를 구한 기적"
   }
  },
  "archive": [
@@ -336,6 +347,15 @@
    "theme": "사연",
    "title": "한밤중 남편을 살려낸 똑똑한 보조견의 기적",
    "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261102_1820_ep018.mp4",
+   "ep": "ep018",
+   "theme": "사연",
+   "title": "우연한 만남이 절망에 빠진 남자를 구한 기적",
+   "seconds": 71,
    "used": false
   }
  ],
@@ -1234,7 +1254,7 @@
    "minutes": 14.7
   }
  ],
- "tg_offset": 359912120,
+ "tg_offset": 359912121,
  "theme_scores": {},
  "last_report": {
   "one_line": "부업 초기에는 30초 내외의 빠른 위기 구조·충격 실화로 파트너 조건을 먼저 뚫고 롱폼으로 연결해야 합니다.",
