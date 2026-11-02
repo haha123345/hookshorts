@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 18,
+ "episode": 19,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -20,7 +20,8 @@
   "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
   "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras",
   "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/",
-  "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/"
+  "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/",
+  "https://www.goodnewsnetwork.org/st-paul-man-jumps-onto-runaway-school-bus-saves-18-children/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -202,6 +203,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/",
    "title": "우연한 만남이 절망에 빠진 남자를 구한 기적"
+  },
+  "ep019": {
+   "date": "2026-11-02 12:08",
+   "seconds": 66,
+   "theme": "사연",
+   "hook": "미국에서 문이 열린 채 달리던 / 스쿨버스에 뛰어든 남성의 정체",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/st-paul-man-jumps-onto-runaway-school-bus-saves-18-children/",
+   "title": "달리는 스쿨버스에 뛰어든 남성의 놀라운 정체"
   }
  },
  "archive": [
@@ -356,6 +367,15 @@
    "theme": "사연",
    "title": "우연한 만남이 절망에 빠진 남자를 구한 기적",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261102_2108_ep019.mp4",
+   "ep": "ep019",
+   "theme": "사연",
+   "title": "달리는 스쿨버스에 뛰어든 남성의 놀라운 정체",
+   "seconds": 66,
    "used": false
   }
  ],
