@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 16,
+ "episode": 17,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -18,7 +18,8 @@
   "https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/",
   "https://www.goodnewsnetwork.org/girl-sitting-in-dirt-at-bus-stop-gets-surprise-bench-from-couple/",
   "https://www.odditycentral.com/news/blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway.html?utm_source=rss&utm_medium=rss&utm_campaign=blind-man-with-no-drivers-license-drinks-and-drives-car-150-miles-on-highway",
-  "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras"
+  "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras",
+  "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -180,6 +181,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-ugliest-hawaiian-shirt-was-designed-to-make-you-invisible-to-ai-surveillance-cameras",
    "title": "CCTV 앞에서 투명인간 되는 하와이안 셔츠"
+  },
+  "ep017": {
+   "date": "2026-11-02 03:08",
+   "seconds": 75,
+   "theme": "사연",
+   "hook": "한밤중 자던 주인을 깨운 / 보조견이 남편을 살렸습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/",
+   "title": "한밤중 남편을 살려낸 똑똑한 보조견의 기적"
   }
  },
  "archive": [
@@ -316,6 +327,15 @@
    "theme": "사연",
    "title": "CCTV 앞에서 투명인간 되는 하와이안 셔츠",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261102_1208_ep017.mp4",
+   "ep": "ep017",
+   "theme": "사연",
+   "title": "한밤중 남편을 살려낸 똑똑한 보조견의 기적",
+   "seconds": 75,
    "used": false
   }
  ],
@@ -1214,7 +1234,7 @@
    "minutes": 14.7
   }
  ],
- "tg_offset": 359912117,
+ "tg_offset": 359912120,
  "theme_scores": {},
  "last_report": {
   "one_line": "부업 초기에는 30초 내외의 빠른 위기 구조·충격 실화로 파트너 조건을 먼저 뚫고 롱폼으로 연결해야 합니다.",
