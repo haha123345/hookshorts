@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 20,
+ "episode": 21,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -22,7 +22,8 @@
   "https://www.goodnewsnetwork.org/hero-support-dog-saves-husbands-life-after-alerting-deaf-owner-to-deadly-fall/",
   "https://www.goodnewsnetwork.org/chance-meeting-in-chinese-restaurant-saved-a-life/",
   "https://www.goodnewsnetwork.org/st-paul-man-jumps-onto-runaway-school-bus-saves-18-children/",
-  "https://www.goodnewsnetwork.org/strangers-ran-toward-burning-car-to-save-teen-her-mom-now-funds-scholarships-for-heroes-like-them/"
+  "https://www.goodnewsnetwork.org/strangers-ran-toward-burning-car-to-save-teen-her-mom-now-funds-scholarships-for-heroes-like-them/",
+  "https://www.upi.com/Odd_News/2026/11/02/red-shouldered-hawk-too-fat-to-fly/8221793653698/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -224,6 +225,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/strangers-ran-toward-burning-car-to-save-teen-her-mom-now-funds-scholarships-for-heroes-like-them/",
    "title": "불길 속으로 뛰어든 낯선 사람들이 만든 기적"
+  },
+  "ep021": {
+   "date": "2026-11-03 09:03",
+   "seconds": 57,
+   "theme": "사연",
+   "hook": "미국 집 앞마당에 떨어진 / 거대한 매의 반전 정체는?",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upi.com/Odd_News/2026/11/02/red-shouldered-hawk-too-fat-to-fly/8221793653698/",
+   "title": "하늘을 못 날고 땅에 떨어진 매의 놀라운 정체"
   }
  },
  "archive": [
@@ -396,6 +407,15 @@
    "theme": "사연",
    "title": "불길 속으로 뛰어든 낯선 사람들이 만든 기적",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261103_1803_ep021.mp4",
+   "ep": "ep021",
+   "theme": "사연",
+   "title": "하늘을 못 날고 땅에 떨어진 매의 놀라운 정체",
+   "seconds": 57,
    "used": false
   }
  ],
