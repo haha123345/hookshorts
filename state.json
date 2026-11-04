@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 23,
+ "episode": 24,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -25,7 +25,8 @@
   "https://www.goodnewsnetwork.org/strangers-ran-toward-burning-car-to-save-teen-her-mom-now-funds-scholarships-for-heroes-like-them/",
   "https://www.upi.com/Odd_News/2026/11/02/red-shouldered-hawk-too-fat-to-fly/8221793653698/",
   "https://www.goodnewsnetwork.org/retirees-who-lost-spouses-fall-in-love-again-at-88-meeting-in-gym/",
-  "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/"
+  "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/",
+  "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -257,6 +258,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/",
    "title": "호주 전역을 돌며 헌혈 545번 한 남자의 놀라운 사연"
+  },
+  "ep024": {
+   "date": "2026-11-04 08:56",
+   "seconds": 57,
+   "theme": "사연",
+   "hook": "19세 청년이 나무에서 떨어져 / 하반신 마비를 겪었습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/",
+   "title": "하반신 마비 딛고 세계 기록 세운 남자의 놀라운 근황"
   }
  },
  "archive": [
@@ -456,6 +467,15 @@
    "theme": "사연",
    "title": "호주 전역을 돌며 헌혈 545번 한 남자의 놀라운 사연",
    "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261104_1756_ep024.mp4",
+   "ep": "ep024",
+   "theme": "사연",
+   "title": "하반신 마비 딛고 세계 기록 세운 남자의 놀라운 근황",
+   "seconds": 57,
    "used": false
   }
  ],
