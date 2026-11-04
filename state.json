@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 24,
+ "episode": 25,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -26,7 +26,8 @@
   "https://www.upi.com/Odd_News/2026/11/02/red-shouldered-hawk-too-fat-to-fly/8221793653698/",
   "https://www.goodnewsnetwork.org/retirees-who-lost-spouses-fall-in-love-again-at-88-meeting-in-gym/",
   "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/",
-  "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/"
+  "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/",
+  "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -268,6 +269,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/",
    "title": "하반신 마비 딛고 세계 기록 세운 남자의 놀라운 근황"
+  },
+  "ep025": {
+   "date": "2026-11-04 12:03",
+   "seconds": 65,
+   "theme": "사연",
+   "hook": "포르투갈의 한 섬에서 / 마을 전체가 소등했습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+   "title": "매년 가을 포르투갈의 한 섬이 불을 끄는 이유"
   }
  },
  "archive": [
@@ -476,6 +487,15 @@
    "theme": "사연",
    "title": "하반신 마비 딛고 세계 기록 세운 남자의 놀라운 근황",
    "seconds": 57,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261104_2103_ep025.mp4",
+   "ep": "ep025",
+   "theme": "사연",
+   "title": "매년 가을 포르투갈의 한 섬이 불을 끄는 이유",
+   "seconds": 65,
    "used": false
   }
  ],
