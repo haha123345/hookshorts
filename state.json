@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 26,
+ "episode": 27,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -28,7 +28,8 @@
   "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/",
   "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/",
   "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
-  "https://www.odditycentral.com/architecture/china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier.html?utm_source=rss&utm_medium=rss&utm_campaign=china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier"
+  "https://www.odditycentral.com/architecture/china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier.html?utm_source=rss&utm_medium=rss&utm_campaign=china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier",
+  "https://www.goodnewsnetwork.org/woman-becomes-first-person-to-swim-the-entire-california-coastline/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -290,6 +291,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/architecture/china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier.html?utm_source=rss&utm_medium=rss&utm_campaign=china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier",
    "title": "매일 절벽을 기어오르던 아이들을 위해 만든 288미터 승강기"
+  },
+  "ep027": {
+   "date": "2026-11-05 18:50",
+   "seconds": 54,
+   "theme": "사연",
+   "hook": "캘리포니아 해안선을 헤엄쳐 건넌 / 세계 최초의 여성 수영선수",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/woman-becomes-first-person-to-swim-the-entire-california-coastline/",
+   "title": "세계 최초로 캘리포니아 해안선 900마일 헤엄친 여성"
   }
  },
  "archive": [
@@ -516,6 +527,15 @@
    "theme": "사연",
    "title": "매일 절벽을 기어오르던 아이들을 위해 만든 288미터 승강기",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261106_0350_ep027.mp4",
+   "ep": "ep027",
+   "theme": "사연",
+   "title": "세계 최초로 캘리포니아 해안선 900마일 헤엄친 여성",
+   "seconds": 54,
    "used": false
   }
  ],
