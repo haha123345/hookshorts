@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 25,
+ "episode": 26,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -27,7 +27,8 @@
   "https://www.goodnewsnetwork.org/retirees-who-lost-spouses-fall-in-love-again-at-88-meeting-in-gym/",
   "https://www.goodnewsnetwork.org/ultra-rare-blood-carrier-finishes-grand-tour-around-australia-to-donate-at-all-85-blood-banks/",
   "https://www.goodnewsnetwork.org/he-conquered-mountains-and-marathons-now-he-teaches-wheelchair-skateboarding-watch/",
-  "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/"
+  "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+  "https://www.odditycentral.com/architecture/china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier.html?utm_source=rss&utm_medium=rss&utm_campaign=china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -279,6 +280,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
    "title": "매년 가을 포르투갈의 한 섬이 불을 끄는 이유"
+  },
+  "ep026": {
+   "date": "2026-11-05 09:39",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "절벽을 기어오르던 아이들을 위해 / 절벽 승강기가 만들어졌습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/architecture/china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier.html?utm_source=rss&utm_medium=rss&utm_campaign=china-builds-288-meter-outdoor-elevator-to-help-children-reach-school-easier",
+   "title": "매일 절벽을 기어오르던 아이들을 위해 만든 288미터 승강기"
   }
  },
  "archive": [
@@ -496,6 +507,15 @@
    "theme": "사연",
    "title": "매년 가을 포르투갈의 한 섬이 불을 끄는 이유",
    "seconds": 65,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261105_1839_ep026.mp4",
+   "ep": "ep026",
+   "theme": "사연",
+   "title": "매일 절벽을 기어오르던 아이들을 위해 만든 288미터 승강기",
+   "seconds": 74,
    "used": false
   }
  ],
@@ -1394,7 +1414,7 @@
    "minutes": 14.7
   }
  ],
- "tg_offset": 359912127,
+ "tg_offset": 359912131,
  "theme_scores": {},
  "last_report": {
   "one_line": "부업 초기에는 30초 내외의 빠른 위기 구조·충격 실화로 파트너 조건을 먼저 뚫고 롱폼으로 연결해야 합니다.",
