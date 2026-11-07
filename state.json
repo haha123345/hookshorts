@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 31,
+ "episode": 32,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -33,7 +33,8 @@
   "https://www.goodnewsnetwork.org/disabled-veteran-receives-donated-car-beautifully-refurbished-by-auto-collision-students/",
   "https://www.goodnewsnetwork.org/anonymously-pays-dinner-tab-for-27-disability-staff-in-south-korea/",
   "https://www.goodnewsnetwork.org/man-spends-12-days-returning-lost-cash-a-laborer-needed-for-his-daughter/",
-  "https://www.goodnewsnetwork.org/400-yo-padlock-code-finally-cracked-more-than-20-years-after-being-found-in-shipwreck-treasure/"
+  "https://www.goodnewsnetwork.org/400-yo-padlock-code-finally-cracked-more-than-20-years-after-being-found-in-shipwreck-treasure/",
+  "https://www.goodnewsnetwork.org/adventurer-finally-hugs-mom-after-28-year-walk-around-the-world-from-home-in-uk/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -335,6 +336,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/400-yo-padlock-code-finally-cracked-more-than-20-years-after-being-found-in-shipwreck-treasure/",
    "title": "400년 동안 안 열리던 자물쇠의 비밀"
+  },
+  "ep032": {
+   "date": "2026-11-07 14:53",
+   "seconds": 79,
+   "theme": "사연",
+   "hook": "28년 동안 걷기만 해서 / 지구 한 바퀴를 돌아온 남성",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/adventurer-finally-hugs-mom-after-28-year-walk-around-the-world-from-home-in-uk/",
+   "title": "28년 동안 오직 걸어서 지구 한 바퀴를 돌아 집으로 온 남성"
   }
  },
  "archive": [
@@ -597,6 +608,15 @@
    "theme": "사연",
    "title": "400년 동안 안 열리던 자물쇠의 비밀",
    "seconds": 63,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261107_2354_ep032.mp4",
+   "ep": "ep032",
+   "theme": "사연",
+   "title": "28년 동안 오직 걸어서 지구 한 바퀴를 돌아 집으로 온 남성",
+   "seconds": 79,
    "used": false
   }
  ],
