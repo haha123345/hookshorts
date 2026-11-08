@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 33,
+ "episode": 34,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -35,7 +35,8 @@
   "https://www.goodnewsnetwork.org/man-spends-12-days-returning-lost-cash-a-laborer-needed-for-his-daughter/",
   "https://www.goodnewsnetwork.org/400-yo-padlock-code-finally-cracked-more-than-20-years-after-being-found-in-shipwreck-treasure/",
   "https://www.goodnewsnetwork.org/adventurer-finally-hugs-mom-after-28-year-walk-around-the-world-from-home-in-uk/",
-  "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/"
+  "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/",
+  "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -357,6 +358,16 @@
    "channels": [],
    "story": "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/",
    "title": "1년에 극장에서 영화 1,207편을 관람해 기네스북에 오른 남성"
+  },
+  "ep034": {
+   "date": "2026-11-08 15:04",
+   "seconds": 71,
+   "theme": "사연",
+   "hook": "300년 된 석벽 돌이 사라지자 / 위치추적기로 범인을 잡았죠",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/",
+   "title": "300년 된 석벽 돌을 훔쳐간 도둑을 잡은 시장의 비법"
   }
  },
  "archive": [
@@ -637,6 +648,15 @@
    "theme": "사연",
    "title": "1년에 극장에서 영화 1,207편을 관람해 기네스북에 오른 남성",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261109_0004_ep034.mp4",
+   "ep": "ep034",
+   "theme": "사연",
+   "title": "300년 된 석벽 돌을 훔쳐간 도둑을 잡은 시장의 비법",
+   "seconds": 71,
    "used": false
   }
  ],
