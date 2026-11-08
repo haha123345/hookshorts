@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 34,
+ "episode": 35,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -36,7 +36,8 @@
   "https://www.goodnewsnetwork.org/400-yo-padlock-code-finally-cracked-more-than-20-years-after-being-found-in-shipwreck-treasure/",
   "https://www.goodnewsnetwork.org/adventurer-finally-hugs-mom-after-28-year-walk-around-the-world-from-home-in-uk/",
   "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/",
-  "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/"
+  "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/",
+  "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -368,6 +369,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/",
    "title": "300년 된 석벽 돌을 훔쳐간 도둑을 잡은 시장의 비법"
+  },
+  "ep035": {
+   "date": "2026-11-08 17:06",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "찢긴 교복 본 일본 고등학생이 / 30년 뒤 받아든 검은 코트",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/",
+   "title": "30년 전 찢긴 교복 감싸준 겉옷을 돌려받은 남자의 반전"
   }
  },
  "archive": [
@@ -657,6 +668,15 @@
    "theme": "사연",
    "title": "300년 된 석벽 돌을 훔쳐간 도둑을 잡은 시장의 비법",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261109_0206_ep035.mp4",
+   "ep": "ep035",
+   "theme": "사연",
+   "title": "30년 전 찢긴 교복 감싸준 겉옷을 돌려받은 남자의 반전",
+   "seconds": 74,
    "used": false
   }
  ],
