@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 35,
+ "episode": 36,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -37,7 +37,8 @@
   "https://www.goodnewsnetwork.org/adventurer-finally-hugs-mom-after-28-year-walk-around-the-world-from-home-in-uk/",
   "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/",
   "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/",
-  "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/"
+  "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/",
+  "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -379,6 +380,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/",
    "title": "30년 전 찢긴 교복 감싸준 겉옷을 돌려받은 남자의 반전"
+  },
+  "ep036": {
+   "date": "2026-11-09 10:03",
+   "seconds": 71,
+   "theme": "사연",
+   "hook": "강아지가 계속 울자 / 아기의 목숨을 구했습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/",
+   "title": "강아지가 아기 곁에서 계속 울자 일어난 일"
   }
  },
  "archive": [
@@ -677,6 +688,15 @@
    "theme": "사연",
    "title": "30년 전 찢긴 교복 감싸준 겉옷을 돌려받은 남자의 반전",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261109_1903_ep036.mp4",
+   "ep": "ep036",
+   "theme": "사연",
+   "title": "강아지가 아기 곁에서 계속 울자 일어난 일",
+   "seconds": 71,
    "used": false
   }
  ],
