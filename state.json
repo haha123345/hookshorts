@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 36,
+ "episode": 37,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -38,7 +38,8 @@
   "https://www.upi.com/Odd_News/2026/11/02/guinness-world-records-movies-cinema-one-year/2311793639017/",
   "https://www.goodnewsnetwork.org/mayor-uses-airtag-to-catch-capstone-thief/",
   "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/",
-  "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/"
+  "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/",
+  "https://www.goodnewsnetwork.org/mans-halloween-skeletons-prove-perfect-treat-to-woman-battling-breast-cancer/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -390,6 +391,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/",
    "title": "강아지가 아기 곁에서 계속 울자 일어난 일"
+  },
+  "ep037": {
+   "date": "2026-11-09 21:37",
+   "seconds": 73,
+   "theme": "사연",
+   "hook": "마당에 해골을 세웠더니 / 암 환자의 기적이 일어났습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/mans-halloween-skeletons-prove-perfect-treat-to-woman-battling-breast-cancer/",
+   "title": "마당에 해골을 세웠더니 암 환자에게 벌어진 기적"
   }
  },
  "archive": [
@@ -697,6 +708,15 @@
    "theme": "사연",
    "title": "강아지가 아기 곁에서 계속 울자 일어난 일",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261110_0637_ep037.mp4",
+   "ep": "ep037",
+   "theme": "사연",
+   "title": "마당에 해골을 세웠더니 암 환자에게 벌어진 기적",
+   "seconds": 73,
    "used": false
   }
  ],
