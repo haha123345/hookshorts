@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 39,
+ "episode": 40,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -41,7 +41,8 @@
   "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/",
   "https://www.goodnewsnetwork.org/mans-halloween-skeletons-prove-perfect-treat-to-woman-battling-breast-cancer/",
   "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/",
-  "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/"
+  "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
+  "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -423,6 +424,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
    "title": "피자 배달 실수한 할머니에게 생긴 기적"
+  },
+  "ep040": {
+   "date": "2026-11-10 18:51",
+   "seconds": 67,
+   "theme": "사연",
+   "hook": "자폐 사촌의 고통을 본 / 15세가 AI로 해결했죠",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/",
+   "title": "자폐 사촌을 위해 15세 소년이 만든 기적의 앱"
   }
  },
  "archive": [
@@ -757,6 +768,15 @@
    "theme": "사연",
    "title": "피자 배달 실수한 할머니에게 생긴 기적",
    "seconds": 68,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261111_0351_ep040.mp4",
+   "ep": "ep040",
+   "theme": "사연",
+   "title": "자폐 사촌을 위해 15세 소년이 만든 기적의 앱",
+   "seconds": 67,
    "used": false
   }
  ],
