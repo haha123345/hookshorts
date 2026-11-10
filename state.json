@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 38,
+ "episode": 39,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -40,7 +40,8 @@
   "https://www.goodnewsnetwork.org/she-kept-his-coat-for-30-years-then-finally-found-the-boy-who-gave-it-to-her-after-racial-attack/",
   "https://www.goodnewsnetwork.org/baby-saved-as-racing-heartbeat-detected-by-pet/",
   "https://www.goodnewsnetwork.org/mans-halloween-skeletons-prove-perfect-treat-to-woman-battling-breast-cancer/",
-  "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/"
+  "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/",
+  "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -412,6 +413,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/",
    "title": "열린 창문으로 날아간 앵무새를 찾은 기적"
+  },
+  "ep039": {
+   "date": "2026-11-10 16:12",
+   "seconds": 68,
+   "theme": "사연",
+   "hook": "피자 배달을 잘못한 할머니가 / 무려 1억 원을 선물 받았습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
+   "title": "피자 배달 실수한 할머니에게 생긴 기적"
   }
  },
  "archive": [
@@ -737,6 +748,15 @@
    "theme": "사연",
    "title": "열린 창문으로 날아간 앵무새를 찾은 기적",
    "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261111_0112_ep039.mp4",
+   "ep": "ep039",
+   "theme": "사연",
+   "title": "피자 배달 실수한 할머니에게 생긴 기적",
+   "seconds": 68,
    "used": false
   }
  ],
