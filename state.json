@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 40,
+ "episode": 41,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -42,7 +42,8 @@
   "https://www.goodnewsnetwork.org/mans-halloween-skeletons-prove-perfect-treat-to-woman-battling-breast-cancer/",
   "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/",
   "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
-  "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/"
+  "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/",
+  "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -434,6 +435,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/",
    "title": "자폐 사촌을 위해 15세 소년이 만든 기적의 앱"
+  },
+  "ep041": {
+   "date": "2026-11-11 09:24",
+   "seconds": 69,
+   "theme": "사연",
+   "hook": "호박을 뒤집어쓴 사슴을 / 10일 만에 구해냈습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/",
+   "title": "호박통에 머리 낀 사슴을 10일 만에 구한 구조대"
   }
  },
  "archive": [
@@ -777,6 +788,15 @@
    "theme": "사연",
    "title": "자폐 사촌을 위해 15세 소년이 만든 기적의 앱",
    "seconds": 67,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261111_1824_ep041.mp4",
+   "ep": "ep041",
+   "theme": "사연",
+   "title": "호박통에 머리 낀 사슴을 10일 만에 구한 구조대",
+   "seconds": 69,
    "used": false
   }
  ],
