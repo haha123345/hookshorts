@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 41,
+ "episode": 42,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -43,7 +43,8 @@
   "https://www.goodnewsnetwork.org/lucky-bird-found-in-storm-drain-a-mile-from-home/",
   "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
   "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/",
-  "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/"
+  "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/",
+  "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -445,6 +446,16 @@
    "channels": [],
    "story": "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/",
    "title": "호박통에 머리 낀 사슴을 10일 만에 구한 구조대"
+  },
+  "ep042": {
+   "date": "2026-11-11 18:43",
+   "seconds": 71,
+   "theme": "사연",
+   "hook": "전신 마비로 누워있던 할머니가 / 마침내 들려준 기적의 연주",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/",
+   "title": "전신 마비를 이겨낸 84세 할머니의 기적 같은 피아노 연주"
   }
  },
  "archive": [
@@ -797,6 +808,15 @@
    "theme": "사연",
    "title": "호박통에 머리 낀 사슴을 10일 만에 구한 구조대",
    "seconds": 69,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261112_0343_ep042.mp4",
+   "ep": "ep042",
+   "theme": "사연",
+   "title": "전신 마비를 이겨낸 84세 할머니의 기적 같은 피아노 연주",
+   "seconds": 71,
    "used": false
   }
  ],
