@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 44,
+ "episode": 45,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -46,7 +46,8 @@
   "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/",
   "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/",
   "https://www.upi.com/Odd_News/2026/11/09/britiain-Berkshire-firefighters-squirrel-bird-feeder/7921794253473/",
-  "https://www.goodnewsnetwork.org/100-year-old-store-mom-first-birthday-party/"
+  "https://www.goodnewsnetwork.org/100-year-old-store-mom-first-birthday-party/",
+  "https://www.goodnewsnetwork.org/documentarian-helps-103-yo-d-day-survivor-recover-his-lost-war-medals-just-in-time-for-veterans-day/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -478,6 +479,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/100-year-old-store-mom-first-birthday-party/",
    "title": "매일 마트 복도를 걷던 100세 할머니에게 생긴 일"
+  },
+  "ep045": {
+   "date": "2026-11-12 19:00",
+   "seconds": 62,
+   "theme": "사연",
+   "hook": "103세 참전 용사가 잃어버린 훈장을 / 80년 만에 기적처럼 되찾았습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/documentarian-helps-103-yo-d-day-survivor-recover-his-lost-war-medals-just-in-time-for-veterans-day/",
+   "title": "80년 만에 잃어버린 훈장을 찾은 103세 참전 용사"
   }
  },
  "archive": [
@@ -857,6 +868,15 @@
    "theme": "사연",
    "title": "매일 마트 복도를 걷던 100세 할머니에게 생긴 일",
    "seconds": 76,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261113_0400_ep045.mp4",
+   "ep": "ep045",
+   "theme": "사연",
+   "title": "80년 만에 잃어버린 훈장을 찾은 103세 참전 용사",
+   "seconds": 62,
    "used": false
   }
  ],
