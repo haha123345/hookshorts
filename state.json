@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 42,
+ "episode": 43,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -44,7 +44,8 @@
   "https://www.goodnewsnetwork.org/viral-video-raises-76000-for-caregiver/",
   "https://www.goodnewsnetwork.org/15-yo-teaches-himself-machine-learning-to-build-app-that-interprets-autistic-communication/",
   "https://www.upi.com/Odd_News/2026/11/10/deer-plastic-pumpkin-hines-park-westland-michigan/7381794333324/",
-  "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/"
+  "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/",
+  "https://www.upi.com/Odd_News/2026/11/09/britiain-Berkshire-firefighters-squirrel-bird-feeder/7921794253473/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -456,6 +457,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/paralyzed-woman-promised-to-return-and-play-piano-for-rehab-patients-she-kept-her-word/",
    "title": "전신 마비를 이겨낸 84세 할머니의 기적 같은 피아노 연주"
+  },
+  "ep043": {
+   "date": "2026-11-12 09:55",
+   "seconds": 73,
+   "theme": "사연",
+   "hook": "새 모이통 훔쳐 먹던 다람쥐가 / 소방관 절단기로 구조됐습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upi.com/Odd_News/2026/11/09/britiain-Berkshire-firefighters-squirrel-bird-feeder/7921794253473/",
+   "title": "새 모이통에 몸이 낀 다람쥐의 운명"
   }
  },
  "archive": [
@@ -817,6 +828,15 @@
    "theme": "사연",
    "title": "전신 마비를 이겨낸 84세 할머니의 기적 같은 피아노 연주",
    "seconds": 71,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261112_1855_ep043.mp4",
+   "ep": "ep043",
+   "theme": "사연",
+   "title": "새 모이통에 몸이 낀 다람쥐의 운명",
+   "seconds": 73,
    "used": false
   }
  ],
