@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 46,
+ "episode": 47,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -48,7 +48,8 @@
   "https://www.upi.com/Odd_News/2026/11/09/britiain-Berkshire-firefighters-squirrel-bird-feeder/7921794253473/",
   "https://www.goodnewsnetwork.org/100-year-old-store-mom-first-birthday-party/",
   "https://www.goodnewsnetwork.org/documentarian-helps-103-yo-d-day-survivor-recover-his-lost-war-medals-just-in-time-for-veterans-day/",
-  "https://www.goodnewsnetwork.org/theres-a-georgia-okeefe-in-the-closet-words-that-led-to-paintings-joyous-rediscovery/"
+  "https://www.goodnewsnetwork.org/theres-a-georgia-okeefe-in-the-closet-words-that-led-to-paintings-joyous-rediscovery/",
+  "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -500,6 +501,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/theres-a-georgia-okeefe-in-the-closet-words-that-led-to-paintings-joyous-rediscovery/",
    "title": "이모 옷장에서 발견된 40억 원짜리 보물"
+  },
+  "ep047": {
+   "date": "2026-11-13 16:04",
+   "seconds": 69,
+   "theme": "사연",
+   "hook": "80년 동안 몰랐던 / 진짜 아버지를 찾은 할아버지",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/",
+   "title": "80년 만에 유전자 검사로 가족을 찾은 81세 할아버지"
   }
  },
  "archive": [
@@ -897,6 +908,15 @@
    "theme": "사연",
    "title": "이모 옷장에서 발견된 40억 원짜리 보물",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261114_0104_ep047.mp4",
+   "ep": "ep047",
+   "theme": "사연",
+   "title": "80년 만에 유전자 검사로 가족을 찾은 81세 할아버지",
+   "seconds": 69,
    "used": false
   }
  ],
