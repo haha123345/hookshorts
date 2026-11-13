@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 47,
+ "episode": 48,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -49,7 +49,8 @@
   "https://www.goodnewsnetwork.org/100-year-old-store-mom-first-birthday-party/",
   "https://www.goodnewsnetwork.org/documentarian-helps-103-yo-d-day-survivor-recover-his-lost-war-medals-just-in-time-for-veterans-day/",
   "https://www.goodnewsnetwork.org/theres-a-georgia-okeefe-in-the-closet-words-that-led-to-paintings-joyous-rediscovery/",
-  "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/"
+  "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/",
+  "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -511,6 +512,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/",
    "title": "80년 만에 유전자 검사로 가족을 찾은 81세 할아버지"
+  },
+  "ep048": {
+   "date": "2026-11-13 18:42",
+   "seconds": 69,
+   "theme": "사연",
+   "hook": "집 안까지 물이 차오르자 / 패들보드로 달려온 10대들",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/",
+   "title": "911도 포기한 홍수 현장에 패들보드로 나타난 10대 영웅들"
   }
  },
  "archive": [
@@ -916,6 +927,15 @@
    "ep": "ep047",
    "theme": "사연",
    "title": "80년 만에 유전자 검사로 가족을 찾은 81세 할아버지",
+   "seconds": 69,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261114_0342_ep048.mp4",
+   "ep": "ep048",
+   "theme": "사연",
+   "title": "911도 포기한 홍수 현장에 패들보드로 나타난 10대 영웅들",
    "seconds": 69,
    "used": false
   }
