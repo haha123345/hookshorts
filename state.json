@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 50,
+ "episode": 51,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -52,7 +52,8 @@
   "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/",
   "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/",
   "https://www.goodnewsnetwork.org/infant-goes-from-110-seizures-a-day-to-seizure-free-after-rare-treatment/",
-  "https://www.goodnewsnetwork.org/update-stories-of-daring-rescues-continue-to-surface-from-flooded-florida-communities/"
+  "https://www.goodnewsnetwork.org/update-stories-of-daring-rescues-continue-to-surface-from-flooded-florida-communities/",
+  "https://www.odditycentral.com/news/bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine.html?utm_source=rss&utm_medium=rss&utm_campaign=bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -544,6 +545,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/update-stories-of-daring-rescues-continue-to-surface-from-flooded-florida-communities/",
    "title": "목숨 건 수영으로 이웃을 구한 플로리다 영웅"
+  },
+  "ep051": {
+   "date": "2026-11-14 17:12",
+   "seconds": 70,
+   "theme": "사연",
+   "hook": "남성들이 바버샵에서 / 속눈썹을 자르고 있습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine.html?utm_source=rss&utm_medium=rss&utm_campaign=bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine",
+   "title": "바버샵에서 속눈썹을 자르는 남성들"
   }
  },
  "archive": [
@@ -977,6 +988,15 @@
    "theme": "사연",
    "title": "목숨 건 수영으로 이웃을 구한 플로리다 영웅",
    "seconds": 72,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261115_0212_ep051.mp4",
+   "ep": "ep051",
+   "theme": "사연",
+   "title": "바버샵에서 속눈썹을 자르는 남성들",
+   "seconds": 70,
    "used": false
   }
  ],
