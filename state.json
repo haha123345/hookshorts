@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 48,
+ "episode": 49,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -50,7 +50,8 @@
   "https://www.goodnewsnetwork.org/documentarian-helps-103-yo-d-day-survivor-recover-his-lost-war-medals-just-in-time-for-veterans-day/",
   "https://www.goodnewsnetwork.org/theres-a-georgia-okeefe-in-the-closet-words-that-led-to-paintings-joyous-rediscovery/",
   "https://www.goodnewsnetwork.org/canadian-family-finally-identifies-grandfathers-long-lost-wwii-baby-in-england-after-80-years/",
-  "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/"
+  "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/",
+  "https://www.goodnewsnetwork.org/infant-goes-from-110-seizures-a-day-to-seizure-free-after-rare-treatment/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -522,6 +523,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/brave-teens-execute-paddleboard-rescue-of-flooded-neighbors-faith-in-humanity-restored/",
    "title": "911도 포기한 홍수 현장에 패들보드로 나타난 10대 영웅들"
+  },
+  "ep049": {
+   "date": "2026-11-14 09:11",
+   "seconds": 70,
+   "theme": "사연",
+   "hook": "하루 110번 발작하던 아기, / 신약으로 발작이 멈췄습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/infant-goes-from-110-seizures-a-day-to-seizure-free-after-rare-treatment/",
+   "title": "하루 110번 발작하던 아기를 살려낸 기적의 신약"
   }
  },
  "archive": [
@@ -937,6 +948,15 @@
    "theme": "사연",
    "title": "911도 포기한 홍수 현장에 패들보드로 나타난 10대 영웅들",
    "seconds": 69,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261114_1812_ep049.mp4",
+   "ep": "ep049",
+   "theme": "사연",
+   "title": "하루 110번 발작하던 아기를 살려낸 기적의 신약",
+   "seconds": 70,
    "used": false
   }
  ],
