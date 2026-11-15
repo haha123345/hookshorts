@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 52,
+ "episode": 53,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -54,7 +54,8 @@
   "https://www.goodnewsnetwork.org/infant-goes-from-110-seizures-a-day-to-seizure-free-after-rare-treatment/",
   "https://www.goodnewsnetwork.org/update-stories-of-daring-rescues-continue-to-surface-from-flooded-florida-communities/",
   "https://www.odditycentral.com/news/bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine.html?utm_source=rss&utm_medium=rss&utm_campaign=bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine",
-  "https://www.goodnewsnetwork.org/heroic-bravery-of-woman-who-hid-troops-from-nazis-in-wwii/"
+  "https://www.goodnewsnetwork.org/heroic-bravery-of-woman-who-hid-troops-from-nazis-in-wwii/",
+  "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -566,6 +567,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/heroic-bravery-of-woman-who-hid-troops-from-nazis-in-wwii/",
    "title": "바로 옆집에 독일군이 사는데 영국군을 숨겨준 여성의 비밀"
+  },
+  "ep053": {
+   "date": "2026-11-15 15:28",
+   "seconds": 76,
+   "theme": "사연",
+   "hook": "더러운 도로 표지판만 닦던 / 신혼부부가 일으킨 기적",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/",
+   "title": "더러운 도로 표지판만 닦던 부부가 일으킨 놀라운 기적"
   }
  },
  "archive": [
@@ -1017,6 +1028,15 @@
    "theme": "사연",
    "title": "바로 옆집에 독일군이 사는데 영국군을 숨겨준 여성의 비밀",
    "seconds": 70,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261116_0028_ep053.mp4",
+   "ep": "ep053",
+   "theme": "사연",
+   "title": "더러운 도로 표지판만 닦던 부부가 일으킨 놀라운 기적",
+   "seconds": 76,
    "used": false
   }
  ],
