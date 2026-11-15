@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 53,
+ "episode": 54,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -55,7 +55,8 @@
   "https://www.goodnewsnetwork.org/update-stories-of-daring-rescues-continue-to-surface-from-flooded-florida-communities/",
   "https://www.odditycentral.com/news/bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine.html?utm_source=rss&utm_medium=rss&utm_campaign=bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine",
   "https://www.goodnewsnetwork.org/heroic-bravery-of-woman-who-hid-troops-from-nazis-in-wwii/",
-  "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/"
+  "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/",
+  "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -577,6 +578,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/",
    "title": "더러운 도로 표지판만 닦던 부부가 일으킨 놀라운 기적"
+  },
+  "ep054": {
+   "date": "2026-11-15 17:53",
+   "seconds": 72,
+   "theme": "사연",
+   "hook": "영국의 한 마을에서 / 신호등을 파괴한 할머니",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons",
+   "title": "신호등이 사람을 죽인다고 믿고 부순 노부부"
   }
  },
  "archive": [
@@ -1037,6 +1048,15 @@
    "theme": "사연",
    "title": "더러운 도로 표지판만 닦던 부부가 일으킨 놀라운 기적",
    "seconds": 76,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261116_0253_ep054.mp4",
+   "ep": "ep054",
+   "theme": "사연",
+   "title": "신호등이 사람을 죽인다고 믿고 부순 노부부",
+   "seconds": 72,
    "used": false
   }
  ],
