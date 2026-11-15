@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v25.1 (이미 올린 사연 다시 만들지 않기)"
+VERSION = "v25.2 (후킹 결말 숨기기·기적 남발 금지·소재 다양화·채널 해설 한 줄·없는 Gemini 모델 건너뛰기)"
 
 
 # ================================================================ 설정/상태
@@ -504,6 +504,9 @@ def model_order(client, preferred):
     GEMMA[:] = gemma[:2] or ["gemma-3-27b-it"]
     flash = [n for n in flash if n != preferred]
     lite = [n for n in lite if n != preferred]
+    if names and preferred not in names:               # 설정한 모델이 사라졌으면(404) 건너뜀
+        print(f"   (설정한 모델 {preferred} 이 목록에 없어서 {(flash + lite + [preferred])[0]} 부터 시도)")
+        return (flash[:3] + lite[:3]) or [preferred]
     return [preferred] + flash[:3] + lite[:3]          # 붐비지 않는 lite 모델도 꼭 포함
 
 
