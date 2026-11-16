@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 54,
+ "episode": 55,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -56,7 +56,8 @@
   "https://www.odditycentral.com/news/bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine.html?utm_source=rss&utm_medium=rss&utm_campaign=bizarre-beauty-trend-sees-men-trimming-their-eyelashes-to-look-more-masculine",
   "https://www.goodnewsnetwork.org/heroic-bravery-of-woman-who-hid-troops-from-nazis-in-wwii/",
   "https://www.goodnewsnetwork.org/couple-with-autism-and-adhd-find-passion-cleaning-filthy-street-signs/",
-  "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons"
+  "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons",
+  "https://www.odditycentral.com/technology/worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -588,6 +589,16 @@
    "channels": [],
    "story": "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons",
    "title": "신호등이 사람을 죽인다고 믿고 부순 노부부"
+  },
+  "ep055": {
+   "date": "2026-11-16 09:53",
+   "seconds": 70,
+   "theme": "사연",
+   "hook": "우사인 볼트보다 빠른 / 괴물 로봇의 정체",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.odditycentral.com/technology/worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt",
+   "title": "우사인 볼트보다 빠른 로봇이 사람을 추격한다면?"
   }
  },
  "archive": [
@@ -1057,6 +1068,15 @@
    "theme": "사연",
    "title": "신호등이 사람을 죽인다고 믿고 부순 노부부",
    "seconds": 72,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261116_1853_ep055.mp4",
+   "ep": "ep055",
+   "theme": "사연",
+   "title": "우사인 볼트보다 빠른 로봇이 사람을 추격한다면?",
+   "seconds": 70,
    "used": false
   }
  ],
