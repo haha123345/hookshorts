@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 57,
+ "episode": 58,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -59,7 +59,8 @@
   "https://www.odditycentral.com/news/group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons.html?utm_source=rss&utm_medium=rss&utm_campaign=group-of-conspiracy-theorists-damage-traffic-light-sensors-they-claim-are-actually-assault-weapons",
   "https://www.odditycentral.com/technology/worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt",
   "https://www.goodnewsnetwork.org/climbers-lug-endangered-and-orphaned-seal-pup-up-a-cliff-to-safety/",
-  "https://www.goodnewsnetwork.org/for-centuries-visitors-walked-right-by-280-unseen-ice-age-cave-paintings/"
+  "https://www.goodnewsnetwork.org/for-centuries-visitors-walked-right-by-280-unseen-ice-age-cave-paintings/",
+  "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -621,6 +622,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/for-centuries-visitors-walked-right-by-280-unseen-ice-age-cave-paintings/",
    "title": "수백 년 동안 수천 명이 그냥 지나친 동굴 벽화의 비밀"
+  },
+  "ep058": {
+   "date": "2026-11-17 17:34",
+   "seconds": 66,
+   "theme": "사연",
+   "hook": "창고에서 썩은 씨앗을 발견했는데 / 알고 보니 성경 속 기적의 곡물이었죠",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/",
+   "title": "다락방에서 발견한 썩은 씨앗의 정체"
   }
  },
  "archive": [
@@ -1117,6 +1128,15 @@
    "theme": "사연",
    "title": "수백 년 동안 수천 명이 그냥 지나친 동굴 벽화의 비밀",
    "seconds": 79,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261118_0234_ep058.mp4",
+   "ep": "ep058",
+   "theme": "사연",
+   "title": "다락방에서 발견한 썩은 씨앗의 정체",
+   "seconds": 66,
    "used": false
   }
  ],
