@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 58,
+ "episode": 59,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -60,7 +60,8 @@
   "https://www.odditycentral.com/technology/worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt.html?utm_source=rss&utm_medium=rss&utm_campaign=worlds-fastest-humanoid-robot-can-already-run-faster-than-usain-bolt",
   "https://www.goodnewsnetwork.org/climbers-lug-endangered-and-orphaned-seal-pup-up-a-cliff-to-safety/",
   "https://www.goodnewsnetwork.org/for-centuries-visitors-walked-right-by-280-unseen-ice-age-cave-paintings/",
-  "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/"
+  "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/",
+  "https://www.goodnewsnetwork.org/algeria-returns-kindness-shown-by-kansans-who-welcomed-its-world-cup-team-with-the-trip-of-a-lifetime/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -632,6 +633,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/",
    "title": "다락방에서 발견한 썩은 씨앗의 정체"
+  },
+  "ep059": {
+   "date": "2026-11-17 19:55",
+   "seconds": 75,
+   "theme": "사연",
+   "hook": "미국 캔자스 시민들이 알제리 팀을 환영했는데 / 알제리 정부가 보낸 뜻밖의 초대장",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/algeria-returns-kindness-shown-by-kansans-who-welcomed-its-world-cup-team-with-the-trip-of-a-lifetime/",
+   "title": "축구팀 하나 환영했다가 알제리 국빈 초대받은 캔자스 주민들"
   }
  },
  "archive": [
@@ -1137,6 +1148,15 @@
    "theme": "사연",
    "title": "다락방에서 발견한 썩은 씨앗의 정체",
    "seconds": 66,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261118_0455_ep059.mp4",
+   "ep": "ep059",
+   "theme": "사연",
+   "title": "축구팀 하나 환영했다가 알제리 국빈 초대받은 캔자스 주민들",
+   "seconds": 75,
    "used": false
   }
  ],
