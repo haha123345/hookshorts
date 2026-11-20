@@ -191,28 +191,27 @@ SEARCH_PROMPT = """구글 검색으로 '{topic}' 와 관련된 실제 해외(또
 """
 
 
-READ_PROMPT = """아래 주소의 기사를 읽고, 기사에 나온 사실(누가·어디서·언제·무슨 일·숫자·결과)을
-빠짐없이 영어 문단으로 정리해 줘. 기사에 없는 내용은 절대 추가하지 마. 기사를 못 읽었으면 NO_ACCESS 한 단어만.
-{url}"""
+READ_PROMPT = """구글 검색을 사용해서 아래 주소 또는 제목의 실화 기사 내용을 확인하고, 기사에 나온 실제 사건 내용과 사실(누가·어디서·언제·무슨 일·구체적 숫자·결과)을 빠짐없이 영어 문단으로 600자 이상 아주 자세히 정리해 줘. 기사에 없는 내용은 절대 지어내지 마. 기사를 전혀 찾을 수 없으면 NO_ACCESS 한 단어만 출력해.
+기사: {url} {title}"""
 
 
-def read_with_gemini(client, models, url):
-    """사이트가 프로그램 접속을 막을 때: Gemini 가 대신 기사를 읽어서 사실만 정리"""
+def read_with_gemini(client, models, url, title=""):
+    """사이트가 프로그램 접속을 막을 때: Gemini 가 구글 검색으로 기사를 확인해서 사실만 정리"""
     from google.genai import types
     try:
-        conf = types.GenerateContentConfig(tools=[types.Tool(url_context=types.UrlContext())], temperature=0.1)
-    except Exception:
+        conf = types.GenerateContentConfig(tools=[types.Tool(google_search=types.GoogleSearch())], temperature=0.1)
+    except Exception as e:
+        print(f"   (GoogleSearch 도구 설정 실패: {e})")
         return ""
-    for model in models[:4]:
+    for model in models[:3]:
         try:
-            resp = client.models.generate_content(model=model, contents=READ_PROMPT.format(url=url), config=conf)
+            resp = client.models.generate_content(model=model, contents=READ_PROMPT.format(url=url, title=title), config=conf)
             text = (resp.text or "").strip()
-            if len(text) > 300 and "NO_ACCESS" not in text:
+            if len(text) > 250 and "NO_ACCESS" not in text:
                 return text
-            return ""                                           # 읽었는데 내용이 없음 → 다른 모델도 같음
         except Exception as e:
-            print(f"   (Gemini 기사 읽기 실패: {str(e)[:90]})")
-            time.sleep(4)
+            print(f"   (Gemini 기사 읽기 실패({model}): {str(e)[:90]})")
+            time.sleep(2)
     return ""
 
 
@@ -229,7 +228,7 @@ def get_article(client, models, url, title="", rss_text=""):
     if len(rss_text) > 400:
         return title, rss_text
     print("   Gemini 가 대신 기사 읽는 중...")
-    return title, read_with_gemini(client, models, url)
+    return title, read_with_gemini(client, models, url, title)
 
 
 def uploaded_titles(state, limit=200):
@@ -336,20 +335,50 @@ def pick_story(env, cfg, state, topic=None):
                 return {"title": title, "url": it["link"], "text": text, "image": it.get("image", "")}
             print(f"   ({it['title'][:40]} → 본문을 못 읽어서 다음 후보로)")
 
-    if topic:                                                       # RSS 에 없으면 구글 검색으로
-        from google.genai import types
-        try:
-            conf = types.GenerateContentConfig(tools=[types.Tool(google_search=types.GoogleSearch())])
-            resp = client.models.generate_content(model=models[0], contents=SEARCH_PROMPT.format(topic=topic),
-                                                  config=conf)
-            m = re.search(r"\{[^{}]*\"url\"[^{}]*\}", resp.text or "")
-            if m:
-                found = json.loads(m.group(0))
-                title, text = get_article(client, models, found["url"], found.get("title", ""))
-                if len(text) > 300:
-                    return {"title": title, "url": found["url"], "text": text, "image": ""}
-        except Exception as e:
-            print(f"   (구글 검색 실패: {e})")
+    # RSS 후보에서 본문을 못 구했거나 자동 실행일 때: Gemini 구글 검색으로 실화 기사 본문까지 직접 발굴
+    from google.genai import types
+    search_topics = [
+        "incredible true story animal rescue news",
+        "bizarre unexpected true event news",
+        "miraculous survival heartwarming true story news",
+        "hilarious misunderstanding true story news",
+        "unbelievable lucky true incident news",
+        "heroic citizen rescue true story news",
+        "inspiring community act of kindness news",
+        "strange funny real life incident news"
+    ]
+    query = topic or (random.choice(search_topics) + f" {datetime.now().year}")
+    search_prompt = f"""구글 검색으로 '{query}' 와 관련된 실제 해외(또는 국내) 실화 뉴스 기사를 찾아서,
+그 기사의 핵심 사실을 바탕으로 내용을 영어로 정리해 줘.
+규칙: 최근 1년 이내 기사, 사람이 사망하거나 크게 다친 사건·범죄 피해 이야기는 제외. 반전이나 감동, 황당하고 재미있는 실화여야 해.
+
+반드시 아래 JSON 형식으로만 답해줘:
+{{
+  "title": "기사 영문 제목",
+  "url": "기사 실제 URL",
+  "text": "기사에서 일어난 전체 줄거리와 사실(누가, 언제, 어디서, 무슨 일, 반전, 결과, 구체적 숫자)을 영어로 600자 이상 아주 자세히 요약한 본문"
+}}
+"""
+    try:
+        conf = types.GenerateContentConfig(tools=[types.Tool(google_search=types.GoogleSearch())], temperature=0.3)
+        for model in models[:3]:
+            try:
+                resp = client.models.generate_content(model=model, contents=search_prompt, config=conf)
+                raw_text = (resp.text or "").strip()
+                m = re.search(r"\{[^{}]*\"title\"[^{}]*\"url\"[^{}]*\"text\"[^{}]*\}", raw_text, re.DOTALL)
+                if not m:
+                    m = re.search(r"\{.*\}", raw_text, re.DOTALL)
+                if m:
+                    found = json.loads(m.group(0))
+                    if found.get("text") and len(found["text"]) > 250:
+                        return {"title": found.get("title", "True Story"),
+                                "url": found.get("url", "https://news.google.com"),
+                                "text": found["text"],
+                                "image": ""}
+            except Exception as err:
+                print(f"   (Gemini 실화 검색 시도 실패({model}): {err})")
+    except Exception as e:
+        print(f"   (구글 검색 실화 발굴 실패: {e})")
     return None
 
 
