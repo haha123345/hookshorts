@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 60,
+ "episode": 61,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -62,7 +62,8 @@
   "https://www.goodnewsnetwork.org/for-centuries-visitors-walked-right-by-280-unseen-ice-age-cave-paintings/",
   "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/",
   "https://www.goodnewsnetwork.org/algeria-returns-kindness-shown-by-kansans-who-welcomed-its-world-cup-team-with-the-trip-of-a-lifetime/",
-  "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/"
+  "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/",
+  "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -654,6 +655,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/",
    "title": "농사 망치던 코뿔소 똥으로 대박 난 인도 부녀 이야기"
+  },
+  "ep061": {
+   "date": "2026-11-21 09:55",
+   "seconds": 84,
+   "theme": "사연",
+   "hook": "도로에 갇힌 신랑이 / 사냥꾼을 만난 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
+   "title": "결혼식 1시간 전 도로에 갇힌 예비부부의 선택"
   }
  },
  "archive": [
@@ -1177,6 +1188,15 @@
    "theme": "사연",
    "title": "농사 망치던 코뿔소 똥으로 대박 난 인도 부녀 이야기",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261121_1855_ep061.mp4",
+   "ep": "ep061",
+   "theme": "사연",
+   "title": "결혼식 1시간 전 도로에 갇힌 예비부부의 선택",
+   "seconds": 84,
    "used": false
   }
  ],
