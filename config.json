@@ -156,8 +156,11 @@
   ],
   "story_feeds": [
     "https://feeds.feedburner.com/OddityCentral",
-    "https://www.goodnewsnetwork.org/feed/",
-    "https://rss.upi.com/news/odd_news.rss"
+    "https://www.boredpanda.com/feed/",
+    "https://www.upworthy.com/feeds/feed.rss",
+    "https://www.theguardian.com/uk/lifeandstyle/rss",
+    "https://www.theguardian.com/world/rss",
+    "https://www.goodnewsnetwork.org/feed/"
   ],
   "story_rate": "+10%"
 }

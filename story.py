@@ -33,8 +33,11 @@ PAGE_HEADERS = dict(UA, **{
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9,ko;q=0.8", "Cache-Control": "no-cache", "Upgrade-Insecure-Requests": "1"})
 DEFAULT_FEEDS = ["https://feeds.feedburner.com/OddityCentral",          # 기이한 실화 (RSS 에 본문 통째로)
-                 "https://www.goodnewsnetwork.org/feed/",               # 감동 실화
-                 "https://rss.upi.com/news/odd_news.rss"]               # 기이한 뉴스 (사이트가 자주 막음)
+                 "https://www.boredpanda.com/feed/",                     # 기이·유쾌한 실화 (RSS 에 본문 통째로)
+                 "https://www.upworthy.com/feeds/feed.rss",              # 감동 실화 (RSS 에 본문 통째로)
+                 "https://www.theguardian.com/uk/lifeandstyle/rss",      # 라이프스타일 실화
+                 "https://www.theguardian.com/world/rss",                # 해외 이슈
+                 "https://www.goodnewsnetwork.org/feed/"]                # 감동 뉴스
 SKIP_TITLE = re.compile(r"(?i)good news in history|^watch:|quiz|crossword|horoscope|deal|sale\b|podcast")
 
 
@@ -203,19 +206,23 @@ def read_with_gemini(client, models, url, title=""):
     except Exception as e:
         print(f"   (GoogleSearch 도구 설정 실패: {e})")
         return ""
-    for model in models[:3]:
+    for model in models[:2]:
         try:
             resp = client.models.generate_content(model=model, contents=READ_PROMPT.format(url=url, title=title), config=conf)
             text = (resp.text or "").strip()
             if len(text) > 250 and "NO_ACCESS" not in text:
                 return text
         except Exception as e:
-            print(f"   (Gemini 기사 읽기 실패({model}): {str(e)[:90]})")
-            time.sleep(2)
+            err_s = str(e)
+            print(f"   (Gemini 기사 읽기 실패({model}): {err_s[:90]})")
+            if "429" in err_s or "RESOURCE_EXHAUSTED" in err_s:
+                time.sleep(10)
+                return ""
+            time.sleep(3)
     return ""
 
 
-def get_article(client, models, url, title="", rss_text=""):
+def get_article(client, models, url, title="", rss_text="", allow_gemini=True):
     """기사 본문 얻기: RSS 본문 → 직접 → Gemini 대신 읽기. 반환: (제목, 본문) — 실패 시 본문 ''"""
     if len(rss_text) > 800:                                         # RSS 에 본문이 통째로 있으면 사이트 접속 안 함
         return title, rss_text
@@ -225,8 +232,10 @@ def get_article(client, models, url, title="", rss_text=""):
             return title or t, text
     except Exception as e:
         print(f"   (기사 페이지 막힘: {str(e)[:100]})")
-    if len(rss_text) > 400:
+    if len(rss_text) > 300:
         return title, rss_text
+    if not allow_gemini:
+        return title, ""
     print("   Gemini 가 대신 기사 읽는 중...")
     return title, read_with_gemini(client, models, url, title)
 
@@ -330,7 +339,7 @@ def pick_story(env, cfg, state, topic=None):
                 tried += 1
                 if tried > 3:                                      # 페이지를 받아야 하는 기사는 3개까지만 시도
                     continue
-            title, text = get_article(client, models, it["link"], it["title"], it.get("content", ""))
+            title, text = get_article(client, models, it["link"], it["title"], it.get("content", ""), allow_gemini=(tried <= 1))
             if len(text) > 300:
                 return {"title": title, "url": it["link"], "text": text, "image": it.get("image", "")}
             print(f"   ({it['title'][:40]} → 본문을 못 읽어서 다음 후보로)")
@@ -361,7 +370,7 @@ def pick_story(env, cfg, state, topic=None):
 """
     try:
         conf = types.GenerateContentConfig(tools=[types.Tool(google_search=types.GoogleSearch())], temperature=0.3)
-        for model in models[:3]:
+        for model in models[:2]:
             try:
                 resp = client.models.generate_content(model=model, contents=search_prompt, config=conf)
                 raw_text = (resp.text or "").strip()
@@ -376,7 +385,10 @@ def pick_story(env, cfg, state, topic=None):
                                 "text": found["text"],
                                 "image": ""}
             except Exception as err:
-                print(f"   (Gemini 실화 검색 시도 실패({model}): {err})")
+                err_s = str(err)
+                print(f"   (Gemini 실화 검색 시도 실패({model}): {err_s[:120]})")
+                if "429" in err_s or "RESOURCE_EXHAUSTED" in err_s:
+                    time.sleep(15)
     except Exception as e:
         print(f"   (구글 검색 실화 발굴 실패: {e})")
     return None
