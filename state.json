@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 62,
+ "episode": 63,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -64,7 +64,8 @@
   "https://www.goodnewsnetwork.org/algeria-returns-kindness-shown-by-kansans-who-welcomed-its-world-cup-team-with-the-trip-of-a-lifetime/",
   "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/",
   "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
-  "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/"
+  "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/",
+  "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -676,6 +677,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/",
    "title": "주름을 지워 준다는 말에 오드리 헵번이 던진 사이다 한마디"
+  },
+  "ep063": {
+   "date": "2026-11-21 18:07",
+   "seconds": 67,
+   "theme": "사연",
+   "hook": "새로 온 매니저가 바꿨던 술 따르는 규칙 / 직원들이 고의로 실수한 진짜 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/",
+   "title": "새로 온 매니저의 황당한 지시를 그대로 따른 직원들의 최후"
   }
  },
  "archive": [
@@ -1217,6 +1228,15 @@
    "theme": "사연",
    "title": "주름을 지워 준다는 말에 오드리 헵번이 던진 사이다 한마디",
    "seconds": 88,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261122_0307_ep063.mp4",
+   "ep": "ep063",
+   "theme": "사연",
+   "title": "새로 온 매니저의 황당한 지시를 그대로 따른 직원들의 최후",
+   "seconds": 67,
    "used": false
   }
  ],
