@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 61,
+ "episode": 62,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -63,7 +63,8 @@
   "https://www.goodnewsnetwork.org/farmer-finds-unknown-seeds-in-his-attic-and-grows-an-ancient-miracle-grain/",
   "https://www.goodnewsnetwork.org/algeria-returns-kindness-shown-by-kansans-who-welcomed-its-world-cup-team-with-the-trip-of-a-lifetime/",
   "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/",
-  "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/"
+  "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
+  "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -665,6 +666,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
    "title": "결혼식 1시간 전 도로에 갇힌 예비부부의 선택"
+  },
+  "ep062": {
+   "date": "2026-11-21 16:09",
+   "seconds": 88,
+   "theme": "사연",
+   "hook": "사진 속 주름 지워 줄까 / 톱배우가 던진 돌직구",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/",
+   "title": "주름을 지워 준다는 말에 오드리 헵번이 던진 사이다 한마디"
   }
  },
  "archive": [
@@ -1197,6 +1208,15 @@
    "theme": "사연",
    "title": "결혼식 1시간 전 도로에 갇힌 예비부부의 선택",
    "seconds": 84,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261122_0109_ep062.mp4",
+   "ep": "ep062",
+   "theme": "사연",
+   "title": "주름을 지워 준다는 말에 오드리 헵번이 던진 사이다 한마디",
+   "seconds": 88,
    "used": false
   }
  ],
