@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 63,
+ "episode": 64,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -65,7 +65,8 @@
   "https://www.goodnewsnetwork.org/father-daughter-business-sells-paper-and-stationery-made-from-rhino-dung/",
   "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
   "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/",
-  "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/"
+  "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/",
+  "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -687,6 +688,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/",
    "title": "새로 온 매니저의 황당한 지시를 그대로 따른 직원들의 최후"
+  },
+  "ep064": {
+   "date": "2026-11-22 09:46",
+   "seconds": 85,
+   "theme": "사연",
+   "hook": "드럼 연주자가 사라지자 / 테이프 줄 하나로 해결한 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/",
+   "title": "드럼 연주자 없이 전설의 디스코 비트 만든 방법"
   }
  },
  "archive": [
@@ -1237,6 +1248,15 @@
    "theme": "사연",
    "title": "새로 온 매니저의 황당한 지시를 그대로 따른 직원들의 최후",
    "seconds": 67,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261122_1846_ep064.mp4",
+   "ep": "ep064",
+   "theme": "사연",
+   "title": "드럼 연주자 없이 전설의 디스코 비트 만든 방법",
+   "seconds": 85,
    "used": false
   }
  ],
