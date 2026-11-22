@@ -50,6 +50,31 @@ def archive_short(state, ep, video, meta, theme):
         print(f"  (쇼츠 보관 실패 — 롱폼에서만 빠짐: {getattr(e, 'stderr', '') or e})")
 
 
+def archive_long(state, video, thumb, title):
+    """완성된 롱폼과 썸네일을 GitHub Releases 에 보관 (업로드 성공 여부와 무관).
+    유튜브 업로드가 실패해도 파일이 남아 있어야 나중에 대신 올릴 수 있음.
+    반환: {"tag", "asset", "thumb_asset"} / 실패하면 None"""
+    try:
+        tag = "shorts-" + datetime.now(KST).strftime("%Y-%m")
+        if _gh("release", "view", tag, check=False).returncode != 0:
+            _gh("release", "create", tag, "--title", f"쇼츠 보관함 {tag[7:]}",
+                "--notes", "자동 보관된 쇼츠 원본 (롱폼 제작용)", "--latest=false")
+        stem = "long_" + datetime.now(KST).strftime("%Y%m%d_%H%M")
+        asset, thumb_asset = stem + ".mp4", stem + "_thumb.jpg"
+        payload = []
+        for src, name in ((video, asset), (thumb, thumb_asset)):
+            dst = Path(video).with_name(name)
+            shutil.copy2(src, dst)
+            payload.append(str(dst))
+        _gh("release", "upload", tag, *payload, "--clobber")
+        print(f"  롱폼 보관 완료: {tag}/{asset}, {thumb_asset}")
+        return {"tag": tag, "asset": asset, "thumb_asset": thumb_asset,
+                "title": re.sub(r"\s*#shorts", "", title or "", flags=re.I).strip()}
+    except Exception as e:
+        print(f"  (롱폼 보관 실패 — 이번 편은 남지 않음: {getattr(e, 'stderr', '') or e})")
+        return None
+
+
 # ================================================================ 화면 요소
 def _font(size):
     return compose.load_font(size)
@@ -198,7 +223,7 @@ def write_texts(env, cfg, titles):
     import finder
     from google.genai import types
     default = {"title": f"믿기 힘든 해외 실화 {len(titles)}가지 몰아보기", "thumb": titles[0][:14] if titles else "",
-               "intro": "해외 실화 몰아보기", "description": "이번 주 화제가 된 해외 실화를 한 번에 모았어요.\n"
+               "intro": "해외 실화 몰아보기", "description": "이번 주 화제가 된 해외 실화를 한 번에 모았습니다.\n"
                "가장 놀라웠던 이야기는 몇 번이었나요?", "hashtags": ["#실화", "#해외사연", "#몰아보기", "#사연", "#해외이슈"]}
     try:
         client = finder.gemini_client(env)
@@ -218,7 +243,7 @@ def write_texts(env, cfg, titles):
 def description(texts, chapters, sources):
     lines = [str(texts["description"]).strip(), "", "📌 목차"]
     lines += [f"{ts(s)} {t}" for s, t in chapters]
-    lines += ["", "※ 실제 해외 기사를 바탕으로 재구성한 이야기예요. 각 이야기의 출처는 쇼츠 설명란에 있어요."]
+    lines += ["", "※ 실제 해외 기사를 바탕으로 재구성한 이야기입니다. 각 이야기의 출처는 쇼츠 설명란에 있습니다."]
     if sources:
         lines += ["자료화면: " + ", ".join(sources)]
     lines += ["", " ".join(texts.get("hashtags", []))]
@@ -226,7 +251,7 @@ def description(texts, chapters, sources):
 
 
 # ================================================================ 실행
-def publish_and_report(env, cfg, state, tg, out, thumb, texts, chapters, total, publish_at=None):
+def publish_and_report(env, cfg, state, tg, out, thumb, texts, chapters, total, publish_at=None, backup=None):
     import finder
     import uploader
     meta = {"title": texts["title"], "description": description(texts, chapters, ["Pixabay", "Pexels", "Openverse"]),
@@ -252,8 +277,12 @@ def publish_and_report(env, cfg, state, tg, out, thumb, texts, chapters, total, 
             tg.call("sendPhoto", files={"photo": f}, chat_id=tg.state["chat_id"], caption=f"롱폼 썸네일: {texts['thumb']}")
     except Exception:
         pass
-    state.setdefault("longs", []).append({"date": datetime.now(KST).strftime("%Y-%m-%d %H:%M"),
-                                          "title": texts["title"], "youtube": vid, "minutes": round(total / 60, 1)})
+    rec = {"date": datetime.now(KST).strftime("%Y-%m-%d %H:%M"),
+           "title": texts["title"], "youtube": vid, "minutes": round(total / 60, 1)}
+    if backup:                                              # 다시 받을 수 있게 보관 위치도 함께 기록
+        rec.update({"tag": backup.get("tag"), "asset": backup.get("asset"),
+                    "thumb_asset": backup.get("thumb_asset")})
+    state.setdefault("longs", []).append(rec)
     finder.save_state(state)
     return vid
 
@@ -278,8 +307,9 @@ def make_weekly_long(env, cfg, state, tg, publish_at=None):
         total, chapters, frame = build_long(items, out, texts["intro"], work)
         thumb = work / "thumb.jpg"
         thumbnail(thumb, frame, texts["thumb"])
-        vid = publish_and_report(env, cfg, state, tg, out, thumb, texts, chapters, total, publish_at)
-        if vid:
+        backup = archive_long(state, out, thumb, texts["title"])   # 업로드 성공 여부와 무관하게 먼저 보관
+        vid = publish_and_report(env, cfg, state, tg, out, thumb, texts, chapters, total, publish_at, backup)
+        if vid or backup:           # 편이 완성됐으면 쇼츠는 소진 처리 (다음 주에 같은 편이 또 만들어지지 않도록)
             for a in pick:
                 a["used"] = True
             import finder
