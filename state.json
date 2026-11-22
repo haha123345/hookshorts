@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 64,
+ "episode": 65,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -66,7 +66,8 @@
   "https://www.upworthy.com/pn-elk-hunter-pit-bike-rescues-idaho-weddingpn-elk-hunter-pit-bike-rescues-idaho-wedding/",
   "https://www.upworthy.com/audrey-hepburn-gave-a-beautifully-defiant-response-when-a-photographer-offered-to-erase-her-wrinkles/",
   "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/",
-  "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/"
+  "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/",
+  "https://www.upworthy.com/red-dress-embroidery-project-ex1-3/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -698,6 +699,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/",
    "title": "드럼 연주자 없이 전설의 디스코 비트 만든 방법"
+  },
+  "ep065": {
+   "date": "2026-11-22 16:08",
+   "seconds": 84,
+   "theme": "사연",
+   "hook": "14년간 전 세계를 돈 / 붉은 천의 정체",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/red-dress-embroidery-project-ex1-3/",
+   "title": "51개국을 14년 동안 떠돌아 완성된 붉은 드레스의 비밀"
   }
  },
  "archive": [
@@ -1257,6 +1268,15 @@
    "theme": "사연",
    "title": "드럼 연주자 없이 전설의 디스코 비트 만든 방법",
    "seconds": 85,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261123_0108_ep065.mp4",
+   "ep": "ep065",
+   "theme": "사연",
+   "title": "51개국을 14년 동안 떠돌아 완성된 붉은 드레스의 비밀",
+   "seconds": 84,
    "used": false
   }
  ],
