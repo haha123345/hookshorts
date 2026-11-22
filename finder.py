@@ -33,7 +33,7 @@ CLIP_DIR = INPUT_DIR / "clips"
 OUTPUT_DIR = BASE / "output"
 STATE_PATH = BASE / "state.json"
 CONFIG_PATH = BASE / "config.json"
-VERSION = "v25.2 (후킹 결말 숨기기·기적 남발 금지·소재 다양화·채널 해설 한 줄·없는 Gemini 모델 건너뛰기)"
+VERSION = "v25.3 (대본 410~460자로 줄여 70초대 복귀·첫 문장 지명 시작 금지·유튜브 토큰 갱신 실패 원인 로그)"
 
 
 # ================================================================ 설정/상태

@@ -51,7 +51,9 @@ def get_credentials(interactive=False):
             creds.refresh(Request())
             TOKEN.write_text(creds.to_json(), encoding="utf-8")
             return creds
-        except Exception:
+        except Exception as e:
+            # 원인을 남겨야 '7일마다 만료(테스트 모드 앱)'인지, 토큰 취소인지 구분할 수 있어요
+            print(f"   (유튜브 토큰 갱신 실패: {type(e).__name__}: {str(e)[:200]})")
             creds = None
     if not interactive:
         raise NotReady("유튜브 로그인이 필요해요. youtube_login.bat 을 실행해 주세요.")
