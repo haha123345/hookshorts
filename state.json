@@ -1198,7 +1198,7 @@
    "theme": "사연",
    "title": "우사인 볼트보다 빠른 로봇이 사람을 추격한다면?",
    "seconds": 70,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1207,7 +1207,7 @@
    "theme": "사연",
    "title": "절벽 아래 고립된 멸종 위기 물범을 구한 등반가들",
    "seconds": 73,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1216,7 +1216,7 @@
    "theme": "사연",
    "title": "수백 년 동안 수천 명이 그냥 지나친 동굴 벽화의 비밀",
    "seconds": 79,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1225,7 +1225,7 @@
    "theme": "사연",
    "title": "다락방에서 발견한 썩은 씨앗의 정체",
    "seconds": 66,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1234,7 +1234,7 @@
    "theme": "사연",
    "title": "축구팀 하나 환영했다가 알제리 국빈 초대받은 캔자스 주민들",
    "seconds": 75,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1243,7 +1243,7 @@
    "theme": "사연",
    "title": "농사 망치던 코뿔소 똥으로 대박 난 인도 부녀 이야기",
    "seconds": 74,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1252,7 +1252,7 @@
    "theme": "사연",
    "title": "결혼식 1시간 전 도로에 갇힌 예비부부의 선택",
    "seconds": 84,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1261,7 +1261,7 @@
    "theme": "사연",
    "title": "주름을 지워 준다는 말에 오드리 헵번이 던진 사이다 한마디",
    "seconds": 88,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1270,7 +1270,7 @@
    "theme": "사연",
    "title": "새로 온 매니저의 황당한 지시를 그대로 따른 직원들의 최후",
    "seconds": 67,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1279,7 +1279,7 @@
    "theme": "사연",
    "title": "드럼 연주자 없이 전설의 디스코 비트 만든 방법",
    "seconds": 85,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1288,7 +1288,7 @@
    "theme": "사연",
    "title": "51개국을 14년 동안 떠돌아 완성된 붉은 드레스의 비밀",
    "seconds": 84,
-   "used": false
+   "used": true
   },
   {
    "tag": "shorts-2026-11",
@@ -1297,7 +1297,7 @@
    "theme": "사연",
    "title": "도로를 무단 파손했다가 법까지 바꾼 남성",
    "seconds": 87,
-   "used": false
+   "used": true
   }
  ],
  "channel_dump": {
@@ -2211,6 +2211,15 @@
    "title": "전 세계를 뒤흔든 소름 돋는 해외 실화 12가지 몰아보기",
    "youtube": null,
    "minutes": 15.3
+  },
+  {
+   "date": "2026-11-23 08:35",
+   "title": "\"진짜 가짜 구분 불가능\" 전 세계를 경악시킨 상식 파괴 해외 실화 12가지 몰아보기",
+   "youtube": null,
+   "minutes": 15.7,
+   "tag": "shorts-2026-11",
+   "asset": "long_20261123_0835.mp4",
+   "thumb_asset": "long_20261123_0835_thumb.jpg"
   }
  ],
  "tg_offset": 359912132,
