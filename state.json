@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 68,
+ "episode": 69,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -70,7 +70,8 @@
   "https://www.upworthy.com/red-dress-embroidery-project-ex1-3/",
   "https://www.upworthy.com/in-1998-a-man-illegally-cut-holes-in-tucson-street-curb-the-result-changed-the-law-ex1/",
   "https://www.theguardian.com/money/2026/nov/17/no-fault-no-claim-minor-car-accident-doubled-insurance-renewal-quote",
-  "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/"
+  "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/",
+  "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -742,6 +743,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/",
    "title": "짝사랑 때문에 시작된 역대급 몰카의 정체"
+  },
+  "ep069": {
+   "date": "2026-11-23 22:43",
+   "seconds": 74,
+   "theme": "사연",
+   "hook": "무대 위에서 방송 사고 낸 / 전설적 가수의 반전",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
+   "title": "무대에서 가사 잊은 가수가 그래미상 탄 이유"
   }
  },
  "archive": [
@@ -1337,6 +1348,15 @@
    "theme": "사연",
    "title": "짝사랑 때문에 시작된 역대급 몰카의 정체",
    "seconds": 78,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261124_0743_ep069.mp4",
+   "ep": "ep069",
+   "theme": "사연",
+   "title": "무대에서 가사 잊은 가수가 그래미상 탄 이유",
+   "seconds": 74,
    "used": false
   }
  ],
