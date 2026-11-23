@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 66,
+ "episode": 67,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -68,7 +68,8 @@
   "https://www.boredpanda.com/sports-bar-manager-jigger-rule-backfires/",
   "https://www.upworthy.com/a-drum-sound-on-stayin-alive-repeats-for-a-reason-you-can-hear-in-another-bee-gees-hit/",
   "https://www.upworthy.com/red-dress-embroidery-project-ex1-3/",
-  "https://www.upworthy.com/in-1998-a-man-illegally-cut-holes-in-tucson-street-curb-the-result-changed-the-law-ex1/"
+  "https://www.upworthy.com/in-1998-a-man-illegally-cut-holes-in-tucson-street-curb-the-result-changed-the-law-ex1/",
+  "https://www.theguardian.com/money/2026/nov/17/no-fault-no-claim-minor-car-accident-doubled-insurance-renewal-quote"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -720,6 +721,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/in-1998-a-man-illegally-cut-holes-in-tucson-street-curb-the-result-changed-the-law-ex1/",
    "title": "도로를 무단 파손했다가 법까지 바꾼 남성"
+  },
+  "ep067": {
+   "date": "2026-11-23 10:44",
+   "seconds": 79,
+   "theme": "사연",
+   "hook": "보험사에 사고를 알렸더니 / 보험료가 두 배로 뛰었습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.theguardian.com/money/2026/nov/17/no-fault-no-claim-minor-car-accident-doubled-insurance-renewal-quote",
+   "title": "사고 신고했다가 보험료 폭탄 맞은 운전자 이야기"
   }
  },
  "archive": [
@@ -1298,6 +1309,15 @@
    "title": "도로를 무단 파손했다가 법까지 바꾼 남성",
    "seconds": 87,
    "used": true
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261123_1944_ep067.mp4",
+   "ep": "ep067",
+   "theme": "사연",
+   "title": "사고 신고했다가 보험료 폭탄 맞은 운전자 이야기",
+   "seconds": 79,
+   "used": false
   }
  ],
  "channel_dump": {
