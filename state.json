@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 70,
+ "episode": 71,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -72,7 +72,8 @@
   "https://www.theguardian.com/money/2026/nov/17/no-fault-no-claim-minor-car-accident-doubled-insurance-renewal-quote",
   "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/",
   "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
-  "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/"
+  "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
+  "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -764,6 +765,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
    "title": "시력 잃어가는 아내 위해 미용학원 찾아간 79세 남편"
+  },
+  "ep071": {
+   "date": "2026-11-24 19:23",
+   "seconds": 75,
+   "theme": "사연",
+   "hook": "1,000명이 멀쩡한 속옷을 / 땅속에 묻어버린 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
+   "title": "멀쩡한 속옷 2천 벌을 땅속에 묻어버린 스위스 사람들"
   }
  },
  "archive": [
@@ -1377,6 +1388,15 @@
    "theme": "사연",
    "title": "시력 잃어가는 아내 위해 미용학원 찾아간 79세 남편",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261125_0423_ep071.mp4",
+   "ep": "ep071",
+   "theme": "사연",
+   "title": "멀쩡한 속옷 2천 벌을 땅속에 묻어버린 스위스 사람들",
+   "seconds": 75,
    "used": false
   }
  ],
