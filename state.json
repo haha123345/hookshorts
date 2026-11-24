@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 71,
+ "episode": 72,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -73,7 +73,8 @@
   "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/",
   "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
   "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
-  "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/"
+  "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
+  "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -775,6 +776,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
    "title": "멀쩡한 속옷 2천 벌을 땅속에 묻어버린 스위스 사람들"
+  },
+  "ep072": {
+   "date": "2026-11-24 21:14",
+   "seconds": 75,
+   "theme": "사연",
+   "hook": "약혼녀가 떠나자 / 통곡하게 된 진짜 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
+   "title": "약혼녀가 떠나자 통곡한 아들의 황당한 실체"
   }
  },
  "archive": [
@@ -1396,6 +1407,15 @@
    "ep": "ep071",
    "theme": "사연",
    "title": "멀쩡한 속옷 2천 벌을 땅속에 묻어버린 스위스 사람들",
+   "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261125_0614_ep072.mp4",
+   "ep": "ep072",
+   "theme": "사연",
+   "title": "약혼녀가 떠나자 통곡한 아들의 황당한 실체",
    "seconds": 75,
    "used": false
   }
