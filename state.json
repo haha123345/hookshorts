@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 69,
+ "episode": 70,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -71,7 +71,8 @@
   "https://www.upworthy.com/in-1998-a-man-illegally-cut-holes-in-tucson-street-curb-the-result-changed-the-law-ex1/",
   "https://www.theguardian.com/money/2026/nov/17/no-fault-no-claim-minor-car-accident-doubled-insurance-renewal-quote",
   "https://www.upworthy.com/in-1890-a-college-student-hid-a-camera-in-his-vest-giving-the-first-candid-look-at-victorian-life-ex1/",
-  "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/"
+  "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
+  "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -753,6 +754,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
    "title": "무대에서 가사 잊은 가수가 그래미상 탄 이유"
+  },
+  "ep070": {
+   "date": "2026-11-24 12:27",
+   "seconds": 77,
+   "theme": "사연",
+   "hook": "시력 잃어가는 아내 위해 / 미용학원 찾은 79세 남편",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
+   "title": "시력 잃어가는 아내 위해 미용학원 찾아간 79세 남편"
   }
  },
  "archive": [
@@ -1357,6 +1368,15 @@
    "theme": "사연",
    "title": "무대에서 가사 잊은 가수가 그래미상 탄 이유",
    "seconds": 74,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261124_2127_ep070.mp4",
+   "ep": "ep070",
+   "theme": "사연",
+   "title": "시력 잃어가는 아내 위해 미용학원 찾아간 79세 남편",
+   "seconds": 77,
    "used": false
   }
  ],
