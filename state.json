@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 72,
+ "episode": 73,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -74,7 +74,8 @@
   "https://www.upworthy.com/ella-fitzgerald-forgot-the-words-to-mack-the-knife-her-improvised-version-earned-a-grammy/",
   "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
   "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
-  "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/"
+  "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
+  "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -786,6 +787,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
    "title": "약혼녀가 떠나자 통곡한 아들의 황당한 실체"
+  },
+  "ep073": {
+   "date": "2026-11-25 11:17",
+   "seconds": 84,
+   "theme": "사연",
+   "hook": "120년간 숨겨진 사진 속 / 여인의 정체를 밝힌 방법",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
+   "title": "120년 묵은 박물관 미스터리를 4시간 만에 푼 여성"
   }
  },
  "archive": [
@@ -1417,6 +1428,15 @@
    "theme": "사연",
    "title": "약혼녀가 떠나자 통곡한 아들의 황당한 실체",
    "seconds": 75,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261125_2017_ep073.mp4",
+   "ep": "ep073",
+   "theme": "사연",
+   "title": "120년 묵은 박물관 미스터리를 4시간 만에 푼 여성",
+   "seconds": 84,
    "used": false
   }
  ],
