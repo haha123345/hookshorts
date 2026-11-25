@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 74,
+ "episode": 75,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -76,7 +76,8 @@
   "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
   "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
   "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
-  "https://www.boredpanda.com/man-international-flight-using-wifes-passport/"
+  "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
+  "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -808,6 +809,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
    "title": "아내 여권으로 해외여행 성공한 남자의 결말"
+  },
+  "ep075": {
+   "date": "2026-11-25 20:33",
+   "seconds": 77,
+   "theme": "사연",
+   "hook": "고양이 엉덩이가 침대에 / 닿는지 실험한 결과",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
+   "title": "고양이 엉덩이가 베개에 진짜 닿을까?"
   }
  },
  "archive": [
@@ -1457,6 +1468,15 @@
    "theme": "사연",
    "title": "아내 여권으로 해외여행 성공한 남자의 결말",
    "seconds": 76,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261126_0533_ep075.mp4",
+   "ep": "ep075",
+   "theme": "사연",
+   "title": "고양이 엉덩이가 베개에 진짜 닿을까?",
+   "seconds": 77,
    "used": false
   }
  ],
