@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 73,
+ "episode": 74,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -75,7 +75,8 @@
   "https://www.upworthy.com/pn-husband-learns-hair-makeup-for-wife-losing-vision/",
   "https://www.upworthy.com/pn-swiss-scientists-buried-underwear-soil-ig-nobel/",
   "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
-  "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/"
+  "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
+  "https://www.boredpanda.com/man-international-flight-using-wifes-passport/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -797,6 +798,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
    "title": "120년 묵은 박물관 미스터리를 4시간 만에 푼 여성"
+  },
+  "ep074": {
+   "date": "2026-11-25 18:34",
+   "seconds": 76,
+   "theme": "사연",
+   "hook": "아내 여권을 잘못 챙겨 / 비행기에 탑승한 남성의 운명",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
+   "title": "아내 여권으로 해외여행 성공한 남자의 결말"
   }
  },
  "archive": [
@@ -1437,6 +1448,15 @@
    "theme": "사연",
    "title": "120년 묵은 박물관 미스터리를 4시간 만에 푼 여성",
    "seconds": 84,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261126_0334_ep074.mp4",
+   "ep": "ep074",
+   "theme": "사연",
+   "title": "아내 여권으로 해외여행 성공한 남자의 결말",
+   "seconds": 76,
    "used": false
   }
  ],
