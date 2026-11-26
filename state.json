@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 75,
+ "episode": 76,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -77,7 +77,8 @@
   "https://www.boredpanda.com/bully-brother-gets-dumped-sister-happy/",
   "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
   "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
-  "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/"
+  "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
+  "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -819,6 +820,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
    "title": "고양이 엉덩이가 베개에 진짜 닿을까?"
+  },
+  "ep076": {
+   "date": "2026-11-26 10:57",
+   "seconds": 82,
+   "theme": "사연",
+   "hook": "45년 전 도둑맞은 성모상이 / 전혀 뜻밖의 장소에서 발견된 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
+   "title": "45년 전 사라진 13세기 성모상이 마침내 되돌아온 이유"
   }
  },
  "archive": [
@@ -1477,6 +1488,15 @@
    "theme": "사연",
    "title": "고양이 엉덩이가 베개에 진짜 닿을까?",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261126_1957_ep076.mp4",
+   "ep": "ep076",
+   "theme": "사연",
+   "title": "45년 전 사라진 13세기 성모상이 마침내 되돌아온 이유",
+   "seconds": 82,
    "used": false
   }
  ],
