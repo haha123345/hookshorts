@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 77,
+ "episode": 78,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -79,7 +79,8 @@
   "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
   "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
   "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
-  "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/"
+  "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
+  "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -841,6 +842,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
    "title": "전처 이름 가리려고 프랑스어 타투 새겼다가 생긴 일"
+  },
+  "ep078": {
+   "date": "2026-11-26 20:20",
+   "seconds": 93,
+   "theme": "사연",
+   "hook": "직장에서 해고된 상사가 보낸 / 살벌한 문자를 본 임원의 반응",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
+   "title": "직장 상사의 협박 문자를 부사장에게 보여주자 벌어진 일"
   }
  },
  "archive": [
@@ -1517,6 +1528,15 @@
    "theme": "사연",
    "title": "전처 이름 가리려고 프랑스어 타투 새겼다가 생긴 일",
    "seconds": 89,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261127_0520_ep078.mp4",
+   "ep": "ep078",
+   "theme": "사연",
+   "title": "직장 상사의 협박 문자를 부사장에게 보여주자 벌어진 일",
+   "seconds": 93,
    "used": false
   }
  ],
