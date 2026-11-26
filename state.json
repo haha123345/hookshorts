@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 76,
+ "episode": 77,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -78,7 +78,8 @@
   "https://www.upworthy.com/pn-museum-visitor-solves-faberge-frames-mystery/",
   "https://www.boredpanda.com/man-international-flight-using-wifes-passport/",
   "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
-  "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/"
+  "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
+  "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -830,6 +831,16 @@
    "channels": [],
    "story": "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
    "title": "45년 전 사라진 13세기 성모상이 마침내 되돌아온 이유"
+  },
+  "ep077": {
+   "date": "2026-11-26 18:16",
+   "seconds": 89,
+   "theme": "사연",
+   "hook": "전처 이름 지우려고 프랑스어로 타투를 새겼는데 / 문장이 전혀 다른 뜻이었습니다",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
+   "title": "전처 이름 가리려고 프랑스어 타투 새겼다가 생긴 일"
   }
  },
  "archive": [
@@ -1497,6 +1508,15 @@
    "theme": "사연",
    "title": "45년 전 사라진 13세기 성모상이 마침내 되돌아온 이유",
    "seconds": 82,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261127_0316_ep077.mp4",
+   "ep": "ep077",
+   "theme": "사연",
+   "title": "전처 이름 가리려고 프랑스어 타투 새겼다가 생긴 일",
+   "seconds": 89,
    "used": false
   }
  ],
