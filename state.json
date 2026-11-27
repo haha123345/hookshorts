@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 78,
+ "episode": 79,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -80,7 +80,8 @@
   "https://www.upworthy.com/do-cat-buttholes-touch-everything-experiment-ex1/",
   "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
   "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
-  "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/"
+  "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
+  "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -852,6 +853,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
    "title": "직장 상사의 협박 문자를 부사장에게 보여주자 벌어진 일"
+  },
+  "ep079": {
+   "date": "2026-11-27 10:53",
+   "seconds": 77,
+   "theme": "사연",
+   "hook": "생방송 댄스 경연 중 / 남성의 의족이 빠졌을 때",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
+   "title": "생방송 댄스 경연 중 의족이 빠진 남성의 결말"
   }
  },
  "archive": [
@@ -1537,6 +1548,15 @@
    "theme": "사연",
    "title": "직장 상사의 협박 문자를 부사장에게 보여주자 벌어진 일",
    "seconds": 93,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261127_1953_ep079.mp4",
+   "ep": "ep079",
+   "theme": "사연",
+   "title": "생방송 댄스 경연 중 의족이 빠진 남성의 결말",
+   "seconds": 77,
    "used": false
   }
  ],
