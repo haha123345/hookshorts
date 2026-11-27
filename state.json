@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 80,
+ "episode": 81,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -82,7 +82,8 @@
   "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
   "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
   "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
-  "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/"
+  "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/",
+  "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -874,6 +875,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/",
    "title": "AI 카메라도 감쪽같이 속이는 마법의 티셔츠"
+  },
+  "ep081": {
+   "date": "2026-11-27 19:59",
+   "seconds": 77,
+   "theme": "사연",
+   "hook": "마라톤 뛰다가 바지에 / 똥 10번 싸고 완주한 이유",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/",
+   "title": "똥 10번 싸며 마라톤 완주한 남자의 반전"
   }
  },
  "archive": [
@@ -1577,6 +1588,15 @@
    "theme": "사연",
    "title": "AI 카메라도 감쪽같이 속이는 마법의 티셔츠",
    "seconds": 72,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261128_0459_ep081.mp4",
+   "ep": "ep081",
+   "theme": "사연",
+   "title": "똥 10번 싸며 마라톤 완주한 남자의 반전",
+   "seconds": 77,
    "used": false
   }
  ],
