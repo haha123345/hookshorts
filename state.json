@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 79,
+ "episode": 80,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -81,7 +81,8 @@
   "https://www.goodnewsnetwork.org/detectives-recover-13th-century-sculpture-stolen-by-notorious-gentleman-thief-erik-the-belgian/",
   "https://www.boredpanda.com/influencer-tattoo-cover-up-ex-name-backfires/",
   "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
-  "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/"
+  "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
+  "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -863,6 +864,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
    "title": "생방송 댄스 경연 중 의족이 빠진 남성의 결말"
+  },
+  "ep080": {
+   "date": "2026-11-27 17:56",
+   "seconds": 72,
+   "theme": "사연",
+   "hook": "베를린 거리에 등장한 / 인공지능을 속인 티셔츠",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/",
+   "title": "AI 카메라도 감쪽같이 속이는 마법의 티셔츠"
   }
  },
  "archive": [
@@ -1557,6 +1568,15 @@
    "theme": "사연",
    "title": "생방송 댄스 경연 중 의족이 빠진 남성의 결말",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261128_0256_ep080.mp4",
+   "ep": "ep080",
+   "theme": "사연",
+   "title": "AI 카메라도 감쪽같이 속이는 마법의 티셔츠",
+   "seconds": 72,
    "used": false
   }
  ],
