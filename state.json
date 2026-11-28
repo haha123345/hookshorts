@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 81,
+ "episode": 82,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -83,7 +83,8 @@
   "https://www.boredpanda.com/fired-boss-drunk-threatening-texts/",
   "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
   "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/",
-  "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/"
+  "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/",
+  "https://www.upworthy.com/pn-mom-behind-girl-scouts-allergy-friendly-cookie/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -885,6 +886,16 @@
    "channels": [],
    "story": "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/",
    "title": "똥 10번 싸며 마라톤 완주한 남자의 반전"
+  },
+  "ep082": {
+   "date": "2026-11-28 10:28",
+   "seconds": 76,
+   "theme": "사연",
+   "hook": "응급실에 실려 간 딸을 위해 / 엄마가 만든 400억 반전",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.upworthy.com/pn-mom-behind-girl-scouts-allergy-friendly-cookie/",
+   "title": "알레르기 딸을 위해 400억 대박 낸 미국 엄마 실화"
   }
  },
  "archive": [
@@ -1597,6 +1608,15 @@
    "theme": "사연",
    "title": "똥 10번 싸며 마라톤 완주한 남자의 반전",
    "seconds": 77,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261128_1928_ep082.mp4",
+   "ep": "ep082",
+   "theme": "사연",
+   "title": "알레르기 딸을 위해 400억 대박 낸 미국 엄마 실화",
+   "seconds": 76,
    "used": false
   }
  ],
