@@ -1,7 +1,7 @@
 {
  "chat_id": 6459662764,
  "story_requests": [],
- "episode": 82,
+ "episode": 83,
  "stories_used": [
   "https://www.odditycentral.com/news/man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife.html?utm_source=rss&utm_medium=rss&utm_campaign=man-gets-jail-time-for-using-robot-vacuum-to-record-cheating-wife",
   "https://www.goodnewsnetwork.org/3-italian-hobbits-searched-for-irishmans-precious-wedding-ring-for-days-before-bringing-it-to-his-home/",
@@ -84,7 +84,8 @@
   "https://www.upworthy.com/ezra-frech-recovered-beautifully-after-prosthetic-leg-fell-off-during-emotional-final-dwts-performance/",
   "https://www.upworthy.com/pn-artist-shirt-confuses-ai-surveillance-cameras/",
   "https://www.boredpanda.com/marathon-runner-diarrhea-12-times-refuses-to-quit-backlash/",
-  "https://www.upworthy.com/pn-mom-behind-girl-scouts-allergy-friendly-cookie/"
+  "https://www.upworthy.com/pn-mom-behind-girl-scouts-allergy-friendly-cookie/",
+  "https://www.goodnewsnetwork.org/loud-neighbor-parkinsons-gofundme/"
  ],
  "pending_uploads": [],
  "episodes": {
@@ -896,6 +897,16 @@
    "channels": [],
    "story": "https://www.upworthy.com/pn-mom-behind-girl-scouts-allergy-friendly-cookie/",
    "title": "알레르기 딸을 위해 400억 대박 낸 미국 엄마 실화"
+  },
+  "ep083": {
+   "date": "2026-11-28 16:46",
+   "seconds": 88,
+   "theme": "사연",
+   "hook": "미국의 한 할머니 집에서 / 들린 의문의 소리의 정체",
+   "youtube": null,
+   "channels": [],
+   "story": "https://www.goodnewsnetwork.org/loud-neighbor-parkinsons-gofundme/",
+   "title": "층간소음인 줄 알았더니 윗집 할머니의 안타까운 사연"
   }
  },
  "archive": [
@@ -1617,6 +1628,15 @@
    "theme": "사연",
    "title": "알레르기 딸을 위해 400억 대박 낸 미국 엄마 실화",
    "seconds": 76,
+   "used": false
+  },
+  {
+   "tag": "shorts-2026-11",
+   "asset": "20261129_0146_ep083.mp4",
+   "ep": "ep083",
+   "theme": "사연",
+   "title": "층간소음인 줄 알았더니 윗집 할머니의 안타까운 사연",
+   "seconds": 88,
    "used": false
   }
  ],
